@@ -56,14 +56,16 @@ public class GroupeidmFactoryImpl extends EFactoryImpl implements GroupeidmFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
+		case GroupeidmPackage.GROUPE:
+			return creategroupe();
 		case GroupeidmPackage.ADMIN:
 			return createadmin();
 		case GroupeidmPackage.AUTEUR:
 			return createauteur();
 		case GroupeidmPackage.MEMBRE:
 			return createmembre();
-		case GroupeidmPackage.FROMATION:
-			return createfromation();
+		case GroupeidmPackage.FORMATION:
+			return createformation();
 		case GroupeidmPackage.TUTEUR:
 			return createtuteur();
 		case GroupeidmPackage.FORUM:
@@ -91,6 +93,16 @@ public class GroupeidmFactoryImpl extends EFactoryImpl implements GroupeidmFacto
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public groupe creategroupe() {
+		groupeImpl groupe = new groupeImpl();
+		return groupe;
 	}
 
 	/**
@@ -128,9 +140,9 @@ public class GroupeidmFactoryImpl extends EFactoryImpl implements GroupeidmFacto
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public fromation createfromation() {
-		fromationImpl fromation = new fromationImpl();
-		return fromation;
+	public formation createformation() {
+		formationImpl formation = new formationImpl();
+		return formation;
 	}
 
 	/**

@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.auteurImpl#getModule <em>Module</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.auteurImpl#getNameAtr <em>Name Atr</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,6 +38,25 @@ public class auteurImpl extends membreImpl implements auteur {
 	 * @ordered
 	 */
 	protected module module;
+
+	/**
+	 * The default value of the '{@link #getNameAtr() <em>Name Atr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameAtr()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_ATR_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getNameAtr() <em>Name Atr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameAtr()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameAtr = NAME_ATR_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,6 +150,28 @@ public class auteurImpl extends membreImpl implements auteur {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getNameAtr() {
+		return nameAtr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameAtr(String newNameAtr) {
+		String oldNameAtr = nameAtr;
+		nameAtr = newNameAtr;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.AUTEUR__NAME_ATR, oldNameAtr,
+					nameAtr));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -168,6 +210,8 @@ public class auteurImpl extends membreImpl implements auteur {
 			if (resolve)
 				return getModule();
 			return basicGetModule();
+		case GroupeidmPackage.AUTEUR__NAME_ATR:
+			return getNameAtr();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -182,6 +226,9 @@ public class auteurImpl extends membreImpl implements auteur {
 		switch (featureID) {
 		case GroupeidmPackage.AUTEUR__MODULE:
 			setModule((module) newValue);
+			return;
+		case GroupeidmPackage.AUTEUR__NAME_ATR:
+			setNameAtr((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -198,6 +245,9 @@ public class auteurImpl extends membreImpl implements auteur {
 		case GroupeidmPackage.AUTEUR__MODULE:
 			setModule((module) null);
 			return;
+		case GroupeidmPackage.AUTEUR__NAME_ATR:
+			setNameAtr(NAME_ATR_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -212,8 +262,27 @@ public class auteurImpl extends membreImpl implements auteur {
 		switch (featureID) {
 		case GroupeidmPackage.AUTEUR__MODULE:
 			return module != null;
+		case GroupeidmPackage.AUTEUR__NAME_ATR:
+			return NAME_ATR_EDEFAULT == null ? nameAtr != null : !NAME_ATR_EDEFAULT.equals(nameAtr);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (nameAtr: ");
+		result.append(nameAtr);
+		result.append(')');
+		return result.toString();
 	}
 
 } //auteurImpl

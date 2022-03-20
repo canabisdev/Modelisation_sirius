@@ -18,46 +18,71 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference groupeidm.ecore#//groupe/forum"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//groupe/tuteur"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//groupe/etudiant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//groupe/nameGp"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//admin">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//admin/groupe"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//admin/fromation"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//admin/formation"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//admin/nameAdm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//admin/passwordAdm"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//auteur">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//auteur/module"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//auteur/nameAtr"/>
     </genClasses>
-    <genClasses ecoreClass="groupeidm.ecore#//membre"/>
-    <genClasses ecoreClass="groupeidm.ecore#//fromation">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//fromation/admin"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//fromation/module"/>
+    <genClasses ecoreClass="groupeidm.ecore#//membre">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//membre/counts"/>
+    </genClasses>
+    <genClasses ecoreClass="groupeidm.ecore#//formation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//formation/admin"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//formation/module"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//formation/nameFrm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//formation/type"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//formation/duration"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//tuteur">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//tuteur/tracking"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//tuteur/groupe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//tuteur/firstNameTr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//tuteur/lastNameTr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//tuteur/numTr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//tuteur/matiere"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//forum">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//forum/etudiant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//forum/nameFrm"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//forum/contenuFrm"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//chat">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//chat/etudiant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//chat/pseudoChat"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//chat/status"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//mail">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//mail/etudiant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//mail/adresseMail"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//mail/password"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//repository">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//repository/etudiant"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//repository/nameRp"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//chapitre">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference groupeidm.ecore#//chapitre/page"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//chapitre/tracking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//chapitre/nameChp"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//module">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//module/fromation"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//module/auteur"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference groupeidm.ecore#//module/chapitre"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//module/tracking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//module/coeff"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//module/Level"/>
     </genClasses>
-    <genClasses ecoreClass="groupeidm.ecore#//page"/>
+    <genClasses ecoreClass="groupeidm.ecore#//page">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//page/numberPg"/>
+    </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//tracking">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//tracking/module"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//tracking/chapitre"/>
@@ -71,10 +96,21 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//etudiant/mail"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//etudiant/repository"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//etudiant/groupe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//etudiant/firstNameEt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//etudiant/lastNameEt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//etudiant/numEt"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//etudiant/classe"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//etudiant/level"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//etudiant/Note"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//connecte">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//connecte/tracking"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//connecte/isConnect"/>
     </genClasses>
-    <genClasses ecoreClass="groupeidm.ecore#//profil"/>
+    <genClasses ecoreClass="groupeidm.ecore#//profil">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//profil/avatar"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//profil/city"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute groupeidm.ecore#//profil/tel"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

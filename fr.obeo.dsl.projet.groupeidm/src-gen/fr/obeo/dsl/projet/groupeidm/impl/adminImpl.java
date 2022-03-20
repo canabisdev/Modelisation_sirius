@@ -4,7 +4,7 @@ package fr.obeo.dsl.projet.groupeidm.impl;
 
 import fr.obeo.dsl.projet.groupeidm.GroupeidmPackage;
 import fr.obeo.dsl.projet.groupeidm.admin;
-import fr.obeo.dsl.projet.groupeidm.fromation;
+import fr.obeo.dsl.projet.groupeidm.formation;
 import fr.obeo.dsl.projet.groupeidm.groupe;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -24,7 +24,9 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.adminImpl#getGroupe <em>Groupe</em>}</li>
- *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.adminImpl#getFromation <em>Fromation</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.adminImpl#getFormation <em>Formation</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.adminImpl#getNameAdm <em>Name Adm</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.adminImpl#getPasswordAdm <em>Password Adm</em>}</li>
  * </ul>
  *
  * @generated
@@ -41,14 +43,54 @@ public class adminImpl extends membreImpl implements admin {
 	protected groupe groupe;
 
 	/**
-	 * The cached value of the '{@link #getFromation() <em>Fromation</em>}' reference.
+	 * The cached value of the '{@link #getFormation() <em>Formation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getFromation()
+	 * @see #getFormation()
 	 * @generated
 	 * @ordered
 	 */
-	protected fromation fromation;
+	protected formation formation;
+
+	/**
+	 * The default value of the '{@link #getNameAdm() <em>Name Adm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameAdm()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_ADM_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNameAdm() <em>Name Adm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameAdm()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameAdm = NAME_ADM_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getPasswordAdm() <em>Password Adm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPasswordAdm()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PASSWORD_ADM_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getPasswordAdm() <em>Password Adm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPasswordAdm()
+	 * @generated
+	 * @ordered
+	 */
+	protected String passwordAdm = PASSWORD_ADM_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -142,17 +184,17 @@ public class adminImpl extends membreImpl implements admin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public fromation getFromation() {
-		if (fromation != null && fromation.eIsProxy()) {
-			InternalEObject oldFromation = (InternalEObject) fromation;
-			fromation = (fromation) eResolveProxy(oldFromation);
-			if (fromation != oldFromation) {
+	public formation getFormation() {
+		if (formation != null && formation.eIsProxy()) {
+			InternalEObject oldFormation = (InternalEObject) formation;
+			formation = (formation) eResolveProxy(oldFormation);
+			if (formation != oldFormation) {
 				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GroupeidmPackage.ADMIN__FROMATION,
-							oldFromation, fromation));
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GroupeidmPackage.ADMIN__FORMATION,
+							oldFormation, formation));
 			}
 		}
-		return fromation;
+		return formation;
 	}
 
 	/**
@@ -160,8 +202,8 @@ public class adminImpl extends membreImpl implements admin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public fromation basicGetFromation() {
-		return fromation;
+	public formation basicGetFormation() {
+		return formation;
 	}
 
 	/**
@@ -169,12 +211,12 @@ public class adminImpl extends membreImpl implements admin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFromation(fromation newFromation, NotificationChain msgs) {
-		fromation oldFromation = fromation;
-		fromation = newFromation;
+	public NotificationChain basicSetFormation(formation newFormation, NotificationChain msgs) {
+		formation oldFormation = formation;
+		formation = newFormation;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					GroupeidmPackage.ADMIN__FROMATION, oldFromation, newFromation);
+					GroupeidmPackage.ADMIN__FORMATION, oldFormation, newFormation);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -188,21 +230,65 @@ public class adminImpl extends membreImpl implements admin {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFromation(fromation newFromation) {
-		if (newFromation != fromation) {
+	public void setFormation(formation newFormation) {
+		if (newFormation != formation) {
 			NotificationChain msgs = null;
-			if (fromation != null)
-				msgs = ((InternalEObject) fromation).eInverseRemove(this, GroupeidmPackage.FROMATION__ADMIN,
-						fromation.class, msgs);
-			if (newFromation != null)
-				msgs = ((InternalEObject) newFromation).eInverseAdd(this, GroupeidmPackage.FROMATION__ADMIN,
-						fromation.class, msgs);
-			msgs = basicSetFromation(newFromation, msgs);
+			if (formation != null)
+				msgs = ((InternalEObject) formation).eInverseRemove(this, GroupeidmPackage.FORMATION__ADMIN,
+						formation.class, msgs);
+			if (newFormation != null)
+				msgs = ((InternalEObject) newFormation).eInverseAdd(this, GroupeidmPackage.FORMATION__ADMIN,
+						formation.class, msgs);
+			msgs = basicSetFormation(newFormation, msgs);
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.ADMIN__FROMATION, newFromation,
-					newFromation));
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.ADMIN__FORMATION, newFormation,
+					newFormation));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNameAdm() {
+		return nameAdm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameAdm(String newNameAdm) {
+		String oldNameAdm = nameAdm;
+		nameAdm = newNameAdm;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.ADMIN__NAME_ADM, oldNameAdm,
+					nameAdm));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPasswordAdm() {
+		return passwordAdm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPasswordAdm(String newPasswordAdm) {
+		String oldPasswordAdm = passwordAdm;
+		passwordAdm = newPasswordAdm;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.ADMIN__PASSWORD_ADM, oldPasswordAdm,
+					passwordAdm));
 	}
 
 	/**
@@ -218,11 +304,11 @@ public class adminImpl extends membreImpl implements admin {
 				msgs = ((InternalEObject) groupe).eInverseRemove(this, GroupeidmPackage.GROUPE__ADMIN, groupe.class,
 						msgs);
 			return basicSetGroupe((groupe) otherEnd, msgs);
-		case GroupeidmPackage.ADMIN__FROMATION:
-			if (fromation != null)
-				msgs = ((InternalEObject) fromation).eInverseRemove(this, GroupeidmPackage.FROMATION__ADMIN,
-						fromation.class, msgs);
-			return basicSetFromation((fromation) otherEnd, msgs);
+		case GroupeidmPackage.ADMIN__FORMATION:
+			if (formation != null)
+				msgs = ((InternalEObject) formation).eInverseRemove(this, GroupeidmPackage.FORMATION__ADMIN,
+						formation.class, msgs);
+			return basicSetFormation((formation) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -237,8 +323,8 @@ public class adminImpl extends membreImpl implements admin {
 		switch (featureID) {
 		case GroupeidmPackage.ADMIN__GROUPE:
 			return basicSetGroupe(null, msgs);
-		case GroupeidmPackage.ADMIN__FROMATION:
-			return basicSetFromation(null, msgs);
+		case GroupeidmPackage.ADMIN__FORMATION:
+			return basicSetFormation(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -255,10 +341,14 @@ public class adminImpl extends membreImpl implements admin {
 			if (resolve)
 				return getGroupe();
 			return basicGetGroupe();
-		case GroupeidmPackage.ADMIN__FROMATION:
+		case GroupeidmPackage.ADMIN__FORMATION:
 			if (resolve)
-				return getFromation();
-			return basicGetFromation();
+				return getFormation();
+			return basicGetFormation();
+		case GroupeidmPackage.ADMIN__NAME_ADM:
+			return getNameAdm();
+		case GroupeidmPackage.ADMIN__PASSWORD_ADM:
+			return getPasswordAdm();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -274,8 +364,14 @@ public class adminImpl extends membreImpl implements admin {
 		case GroupeidmPackage.ADMIN__GROUPE:
 			setGroupe((groupe) newValue);
 			return;
-		case GroupeidmPackage.ADMIN__FROMATION:
-			setFromation((fromation) newValue);
+		case GroupeidmPackage.ADMIN__FORMATION:
+			setFormation((formation) newValue);
+			return;
+		case GroupeidmPackage.ADMIN__NAME_ADM:
+			setNameAdm((String) newValue);
+			return;
+		case GroupeidmPackage.ADMIN__PASSWORD_ADM:
+			setPasswordAdm((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -292,8 +388,14 @@ public class adminImpl extends membreImpl implements admin {
 		case GroupeidmPackage.ADMIN__GROUPE:
 			setGroupe((groupe) null);
 			return;
-		case GroupeidmPackage.ADMIN__FROMATION:
-			setFromation((fromation) null);
+		case GroupeidmPackage.ADMIN__FORMATION:
+			setFormation((formation) null);
+			return;
+		case GroupeidmPackage.ADMIN__NAME_ADM:
+			setNameAdm(NAME_ADM_EDEFAULT);
+			return;
+		case GroupeidmPackage.ADMIN__PASSWORD_ADM:
+			setPasswordAdm(PASSWORD_ADM_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -309,10 +411,33 @@ public class adminImpl extends membreImpl implements admin {
 		switch (featureID) {
 		case GroupeidmPackage.ADMIN__GROUPE:
 			return groupe != null;
-		case GroupeidmPackage.ADMIN__FROMATION:
-			return fromation != null;
+		case GroupeidmPackage.ADMIN__FORMATION:
+			return formation != null;
+		case GroupeidmPackage.ADMIN__NAME_ADM:
+			return NAME_ADM_EDEFAULT == null ? nameAdm != null : !NAME_ADM_EDEFAULT.equals(nameAdm);
+		case GroupeidmPackage.ADMIN__PASSWORD_ADM:
+			return PASSWORD_ADM_EDEFAULT == null ? passwordAdm != null : !PASSWORD_ADM_EDEFAULT.equals(passwordAdm);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (nameAdm: ");
+		result.append(nameAdm);
+		result.append(", passwordAdm: ");
+		result.append(passwordAdm);
+		result.append(')');
+		return result.toString();
 	}
 
 } //adminImpl

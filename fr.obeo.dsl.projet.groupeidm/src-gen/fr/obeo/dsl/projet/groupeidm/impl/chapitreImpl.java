@@ -33,6 +33,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.chapitreImpl#getPage <em>Page</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.chapitreImpl#getTracking <em>Tracking</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.chapitreImpl#getNameChp <em>Name Chp</em>}</li>
  * </ul>
  *
  * @generated
@@ -57,6 +58,26 @@ public class chapitreImpl extends MinimalEObjectImpl.Container implements chapit
 	 * @ordered
 	 */
 	protected tracking tracking;
+
+	/**
+	 * The default value of the '{@link #getNameChp() <em>Name Chp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameChp()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_CHP_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNameChp() <em>Name Chp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameChp()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameChp = NAME_CHP_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,6 +183,28 @@ public class chapitreImpl extends MinimalEObjectImpl.Container implements chapit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getNameChp() {
+		return nameChp;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameChp(String newNameChp) {
+		String oldNameChp = nameChp;
+		nameChp = newNameChp;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.CHAPITRE__NAME_CHP, oldNameChp,
+					nameChp));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -204,6 +247,8 @@ public class chapitreImpl extends MinimalEObjectImpl.Container implements chapit
 			if (resolve)
 				return getTracking();
 			return basicGetTracking();
+		case GroupeidmPackage.CHAPITRE__NAME_CHP:
+			return getNameChp();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -224,6 +269,9 @@ public class chapitreImpl extends MinimalEObjectImpl.Container implements chapit
 		case GroupeidmPackage.CHAPITRE__TRACKING:
 			setTracking((tracking) newValue);
 			return;
+		case GroupeidmPackage.CHAPITRE__NAME_CHP:
+			setNameChp((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -242,6 +290,9 @@ public class chapitreImpl extends MinimalEObjectImpl.Container implements chapit
 		case GroupeidmPackage.CHAPITRE__TRACKING:
 			setTracking((tracking) null);
 			return;
+		case GroupeidmPackage.CHAPITRE__NAME_CHP:
+			setNameChp(NAME_CHP_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -258,8 +309,27 @@ public class chapitreImpl extends MinimalEObjectImpl.Container implements chapit
 			return page != null && !page.isEmpty();
 		case GroupeidmPackage.CHAPITRE__TRACKING:
 			return tracking != null;
+		case GroupeidmPackage.CHAPITRE__NAME_CHP:
+			return NAME_CHP_EDEFAULT == null ? nameChp != null : !NAME_CHP_EDEFAULT.equals(nameChp);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (nameChp: ");
+		result.append(nameChp);
+		result.append(')');
+		return result.toString();
 	}
 
 } //chapitreImpl

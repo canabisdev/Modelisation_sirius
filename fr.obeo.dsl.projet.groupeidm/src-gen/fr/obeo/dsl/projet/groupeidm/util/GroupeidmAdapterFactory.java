@@ -87,8 +87,8 @@ public class GroupeidmAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter casefromation(fromation object) {
-			return createfromationAdapter();
+		public Adapter caseformation(formation object) {
+			return createformationAdapter();
 		}
 
 		@Override
@@ -227,16 +227,16 @@ public class GroupeidmAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.obeo.dsl.projet.groupeidm.fromation <em>fromation</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.obeo.dsl.projet.groupeidm.formation <em>formation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.obeo.dsl.projet.groupeidm.fromation
+	 * @see fr.obeo.dsl.projet.groupeidm.formation
 	 * @generated
 	 */
-	public Adapter createfromationAdapter() {
+	public Adapter createformationAdapter() {
 		return null;
 	}
 

@@ -14,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.repository#getEtudiant <em>Etudiant</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.repository#getNameRp <em>Name Rp</em>}</li>
  * </ul>
  *
  * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getrepository()
@@ -44,5 +45,27 @@ public interface repository extends EObject {
 	 * @generated
 	 */
 	void setEtudiant(etudiant value);
+
+	/**
+	 * Returns the value of the '<em><b>Name Rp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name Rp</em>' attribute.
+	 * @see #setNameRp(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getrepository_NameRp()
+	 * @model
+	 * @generated
+	 */
+	String getNameRp();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.repository#getNameRp <em>Name Rp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Rp</em>' attribute.
+	 * @see #getNameRp()
+	 * @generated
+	 */
+	void setNameRp(String value);
 
 } // repository

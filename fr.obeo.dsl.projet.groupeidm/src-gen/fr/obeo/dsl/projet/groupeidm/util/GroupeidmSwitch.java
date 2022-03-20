@@ -98,9 +98,9 @@ public class GroupeidmSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case GroupeidmPackage.FROMATION: {
-			fromation fromation = (fromation) theEObject;
-			T result = casefromation(fromation);
+		case GroupeidmPackage.FORMATION: {
+			formation formation = (formation) theEObject;
+			T result = caseformation(formation);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -259,17 +259,17 @@ public class GroupeidmSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>fromation</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>formation</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>fromation</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>formation</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T casefromation(fromation object) {
+	public T caseformation(formation object) {
 		return null;
 	}
 

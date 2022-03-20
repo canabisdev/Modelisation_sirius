@@ -12,7 +12,9 @@ package fr.obeo.dsl.projet.groupeidm;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.admin#getGroupe <em>Groupe</em>}</li>
- *   <li>{@link fr.obeo.dsl.projet.groupeidm.admin#getFromation <em>Fromation</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.admin#getFormation <em>Formation</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.admin#getNameAdm <em>Name Adm</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.admin#getPasswordAdm <em>Password Adm</em>}</li>
  * </ul>
  *
  * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getadmin()
@@ -45,27 +47,71 @@ public interface admin extends membre {
 	void setGroupe(groupe value);
 
 	/**
-	 * Returns the value of the '<em><b>Fromation</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link fr.obeo.dsl.projet.groupeidm.fromation#getAdmin <em>Admin</em>}'.
+	 * Returns the value of the '<em><b>Formation</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link fr.obeo.dsl.projet.groupeidm.formation#getAdmin <em>Admin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Fromation</em>' reference.
-	 * @see #setFromation(fromation)
-	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getadmin_Fromation()
-	 * @see fr.obeo.dsl.projet.groupeidm.fromation#getAdmin
+	 * @return the value of the '<em>Formation</em>' reference.
+	 * @see #setFormation(formation)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getadmin_Formation()
+	 * @see fr.obeo.dsl.projet.groupeidm.formation#getAdmin
 	 * @model opposite="admin"
 	 * @generated
 	 */
-	fromation getFromation();
+	formation getFormation();
 
 	/**
-	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.admin#getFromation <em>Fromation</em>}' reference.
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.admin#getFormation <em>Formation</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Fromation</em>' reference.
-	 * @see #getFromation()
+	 * @param value the new value of the '<em>Formation</em>' reference.
+	 * @see #getFormation()
 	 * @generated
 	 */
-	void setFromation(fromation value);
+	void setFormation(formation value);
+
+	/**
+	 * Returns the value of the '<em><b>Name Adm</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name Adm</em>' attribute.
+	 * @see #setNameAdm(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getadmin_NameAdm()
+	 * @model
+	 * @generated
+	 */
+	String getNameAdm();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.admin#getNameAdm <em>Name Adm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Adm</em>' attribute.
+	 * @see #getNameAdm()
+	 * @generated
+	 */
+	void setNameAdm(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Password Adm</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Password Adm</em>' attribute.
+	 * @see #setPasswordAdm(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getadmin_PasswordAdm()
+	 * @model
+	 * @generated
+	 */
+	String getPasswordAdm();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.admin#getPasswordAdm <em>Password Adm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Password Adm</em>' attribute.
+	 * @see #getPasswordAdm()
+	 * @generated
+	 */
+	void setPasswordAdm(String value);
 
 } // admin

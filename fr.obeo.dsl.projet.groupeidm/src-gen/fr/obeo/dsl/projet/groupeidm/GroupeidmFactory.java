@@ -22,6 +22,15 @@ public interface GroupeidmFactory extends EFactory {
 	GroupeidmFactory eINSTANCE = fr.obeo.dsl.projet.groupeidm.impl.GroupeidmFactoryImpl.init();
 
 	/**
+	 * Returns a new object of class '<em>groupe</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>groupe</em>'.
+	 * @generated
+	 */
+	groupe creategroupe();
+
+	/**
 	 * Returns a new object of class '<em>admin</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -49,13 +58,13 @@ public interface GroupeidmFactory extends EFactory {
 	membre createmembre();
 
 	/**
-	 * Returns a new object of class '<em>fromation</em>'.
+	 * Returns a new object of class '<em>formation</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>fromation</em>'.
+	 * @return a new object of class '<em>formation</em>'.
 	 * @generated
 	 */
-	fromation createfromation();
+	formation createformation();
 
 	/**
 	 * Returns a new object of class '<em>tuteur</em>'.

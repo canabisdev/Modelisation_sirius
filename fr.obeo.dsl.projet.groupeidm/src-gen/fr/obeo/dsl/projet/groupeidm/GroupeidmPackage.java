@@ -2,9 +2,11 @@
  */
 package fr.obeo.dsl.projet.groupeidm;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
+import org.eclipse.emf.ecore.EStructuralFeature;
 
 /**
  * <!-- begin-user-doc -->
@@ -129,13 +131,22 @@ public interface GroupeidmPackage extends EPackage {
 	int GROUPE__ETUDIANT = 6;
 
 	/**
+	 * The feature id for the '<em><b>Name Gp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int GROUPE__NAME_GP = 7;
+
+	/**
 	 * The number of structural features of the '<em>groupe</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GROUPE_FEATURE_COUNT = 7;
+	int GROUPE_FEATURE_COUNT = 8;
 
 	/**
 	 * The number of operations of the '<em>groupe</em>' class.
@@ -157,13 +168,22 @@ public interface GroupeidmPackage extends EPackage {
 	int MEMBRE = 3;
 
 	/**
+	 * The feature id for the '<em><b>Counts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MEMBRE__COUNTS = 0;
+
+	/**
 	 * The number of structural features of the '<em>membre</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MEMBRE_FEATURE_COUNT = 0;
+	int MEMBRE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>membre</em>' class.
@@ -185,6 +205,15 @@ public interface GroupeidmPackage extends EPackage {
 	int ADMIN = 1;
 
 	/**
+	 * The feature id for the '<em><b>Counts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMIN__COUNTS = MEMBRE__COUNTS;
+
+	/**
 	 * The feature id for the '<em><b>Groupe</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -194,13 +223,31 @@ public interface GroupeidmPackage extends EPackage {
 	int ADMIN__GROUPE = MEMBRE_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Fromation</b></em>' reference.
+	 * The feature id for the '<em><b>Formation</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN__FROMATION = MEMBRE_FEATURE_COUNT + 1;
+	int ADMIN__FORMATION = MEMBRE_FEATURE_COUNT + 1;
+
+	/**
+	 * The feature id for the '<em><b>Name Adm</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMIN__NAME_ADM = MEMBRE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Password Adm</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ADMIN__PASSWORD_ADM = MEMBRE_FEATURE_COUNT + 3;
 
 	/**
 	 * The number of structural features of the '<em>admin</em>' class.
@@ -209,7 +256,7 @@ public interface GroupeidmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ADMIN_FEATURE_COUNT = MEMBRE_FEATURE_COUNT + 2;
+	int ADMIN_FEATURE_COUNT = MEMBRE_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>admin</em>' class.
@@ -231,6 +278,15 @@ public interface GroupeidmPackage extends EPackage {
 	int AUTEUR = 2;
 
 	/**
+	 * The feature id for the '<em><b>Counts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTEUR__COUNTS = MEMBRE__COUNTS;
+
+	/**
 	 * The feature id for the '<em><b>Module</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -240,13 +296,22 @@ public interface GroupeidmPackage extends EPackage {
 	int AUTEUR__MODULE = MEMBRE_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Name Atr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int AUTEUR__NAME_ATR = MEMBRE_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>auteur</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int AUTEUR_FEATURE_COUNT = MEMBRE_FEATURE_COUNT + 1;
+	int AUTEUR_FEATURE_COUNT = MEMBRE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>auteur</em>' class.
@@ -258,14 +323,14 @@ public interface GroupeidmPackage extends EPackage {
 	int AUTEUR_OPERATION_COUNT = MEMBRE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.fromationImpl <em>fromation</em>}' class.
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.formationImpl <em>formation</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.fromationImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getfromation()
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.formationImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getformation()
 	 * @generated
 	 */
-	int FROMATION = 4;
+	int FORMATION = 4;
 
 	/**
 	 * The feature id for the '<em><b>Admin</b></em>' reference.
@@ -274,7 +339,7 @@ public interface GroupeidmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FROMATION__ADMIN = 0;
+	int FORMATION__ADMIN = 0;
 
 	/**
 	 * The feature id for the '<em><b>Module</b></em>' reference.
@@ -283,25 +348,52 @@ public interface GroupeidmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int FROMATION__MODULE = 1;
+	int FORMATION__MODULE = 1;
 
 	/**
-	 * The number of structural features of the '<em>fromation</em>' class.
+	 * The feature id for the '<em><b>Name Frm</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FROMATION_FEATURE_COUNT = 2;
+	int FORMATION__NAME_FRM = 2;
 
 	/**
-	 * The number of operations of the '<em>fromation</em>' class.
+	 * The feature id for the '<em><b>Type</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FROMATION_OPERATION_COUNT = 0;
+	int FORMATION__TYPE = 3;
+
+	/**
+	 * The feature id for the '<em><b>Duration</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMATION__DURATION = 4;
+
+	/**
+	 * The number of structural features of the '<em>formation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMATION_FEATURE_COUNT = 5;
+
+	/**
+	 * The number of operations of the '<em>formation</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORMATION_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.tuteurImpl <em>tuteur</em>}' class.
@@ -312,6 +404,127 @@ public interface GroupeidmPackage extends EPackage {
 	 * @generated
 	 */
 	int TUTEUR = 5;
+
+	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.forumImpl <em>forum</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.forumImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getforum()
+	 * @generated
+	 */
+	int FORUM = 6;
+
+	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.chatImpl <em>chat</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.chatImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getchat()
+	 * @generated
+	 */
+	int CHAT = 7;
+
+	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.mailImpl <em>mail</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.mailImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getmail()
+	 * @generated
+	 */
+	int MAIL = 8;
+
+	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.repositoryImpl <em>repository</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.repositoryImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getrepository()
+	 * @generated
+	 */
+	int REPOSITORY = 9;
+
+	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.chapitreImpl <em>chapitre</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.chapitreImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getchapitre()
+	 * @generated
+	 */
+	int CHAPITRE = 10;
+
+	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.moduleImpl <em>module</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.moduleImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getmodule()
+	 * @generated
+	 */
+	int MODULE = 11;
+
+	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.pageImpl <em>page</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.pageImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getpage()
+	 * @generated
+	 */
+	int PAGE = 12;
+
+	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.trackingImpl <em>tracking</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.trackingImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#gettracking()
+	 * @generated
+	 */
+	int TRACKING = 13;
+
+	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl <em>etudiant</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getetudiant()
+	 * @generated
+	 */
+	int ETUDIANT = 14;
+
+	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.connecteImpl <em>connecte</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.connecteImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getconnecte()
+	 * @generated
+	 */
+	int CONNECTE = 15;
+
+	/**
+	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.profilImpl <em>profil</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.profilImpl
+	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getprofil()
+	 * @generated
+	 */
+	int PROFIL = 16;
+
+	EStructuralFeature FROMATION__ADMIN = null;
+
+	/**
+	 * The feature id for the '<em><b>Counts</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUTEUR__COUNTS = MEMBRE__COUNTS;
 
 	/**
 	 * The feature id for the '<em><b>Tracking</b></em>' reference.
@@ -332,13 +545,49 @@ public interface GroupeidmPackage extends EPackage {
 	int TUTEUR__GROUPE = MEMBRE_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>First Name Tr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUTEUR__FIRST_NAME_TR = MEMBRE_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Last Name Tr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUTEUR__LAST_NAME_TR = MEMBRE_FEATURE_COUNT + 3;
+
+	/**
+	 * The feature id for the '<em><b>Num Tr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUTEUR__NUM_TR = MEMBRE_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Matiere</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TUTEUR__MATIERE = MEMBRE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>tuteur</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TUTEUR_FEATURE_COUNT = MEMBRE_FEATURE_COUNT + 2;
+	int TUTEUR_FEATURE_COUNT = MEMBRE_FEATURE_COUNT + 6;
 
 	/**
 	 * The number of operations of the '<em>tuteur</em>' class.
@@ -350,16 +599,6 @@ public interface GroupeidmPackage extends EPackage {
 	int TUTEUR_OPERATION_COUNT = MEMBRE_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.forumImpl <em>forum</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.forumImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getforum()
-	 * @generated
-	 */
-	int FORUM = 6;
-
-	/**
 	 * The feature id for the '<em><b>Etudiant</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -369,13 +608,31 @@ public interface GroupeidmPackage extends EPackage {
 	int FORUM__ETUDIANT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name Frm</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORUM__NAME_FRM = 1;
+
+	/**
+	 * The feature id for the '<em><b>Contenu Frm</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FORUM__CONTENU_FRM = 2;
+
+	/**
 	 * The number of structural features of the '<em>forum</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int FORUM_FEATURE_COUNT = 1;
+	int FORUM_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>forum</em>' class.
@@ -387,16 +644,6 @@ public interface GroupeidmPackage extends EPackage {
 	int FORUM_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.chatImpl <em>chat</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.chatImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getchat()
-	 * @generated
-	 */
-	int CHAT = 7;
-
-	/**
 	 * The feature id for the '<em><b>Etudiant</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -406,13 +653,31 @@ public interface GroupeidmPackage extends EPackage {
 	int CHAT__ETUDIANT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Pseudo Chat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHAT__PSEUDO_CHAT = 1;
+
+	/**
+	 * The feature id for the '<em><b>Status</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHAT__STATUS = 2;
+
+	/**
 	 * The number of structural features of the '<em>chat</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHAT_FEATURE_COUNT = 1;
+	int CHAT_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>chat</em>' class.
@@ -424,16 +689,6 @@ public interface GroupeidmPackage extends EPackage {
 	int CHAT_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.mailImpl <em>mail</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.mailImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getmail()
-	 * @generated
-	 */
-	int MAIL = 8;
-
-	/**
 	 * The feature id for the '<em><b>Etudiant</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -443,13 +698,31 @@ public interface GroupeidmPackage extends EPackage {
 	int MAIL__ETUDIANT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Adresse Mail</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAIL__ADRESSE_MAIL = 1;
+
+	/**
+	 * The feature id for the '<em><b>Password</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MAIL__PASSWORD = 2;
+
+	/**
 	 * The number of structural features of the '<em>mail</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MAIL_FEATURE_COUNT = 1;
+	int MAIL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>mail</em>' class.
@@ -461,16 +734,6 @@ public interface GroupeidmPackage extends EPackage {
 	int MAIL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.repositoryImpl <em>repository</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.repositoryImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getrepository()
-	 * @generated
-	 */
-	int REPOSITORY = 9;
-
-	/**
 	 * The feature id for the '<em><b>Etudiant</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -480,13 +743,22 @@ public interface GroupeidmPackage extends EPackage {
 	int REPOSITORY__ETUDIANT = 0;
 
 	/**
+	 * The feature id for the '<em><b>Name Rp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int REPOSITORY__NAME_RP = 1;
+
+	/**
 	 * The number of structural features of the '<em>repository</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int REPOSITORY_FEATURE_COUNT = 1;
+	int REPOSITORY_FEATURE_COUNT = 2;
 
 	/**
 	 * The number of operations of the '<em>repository</em>' class.
@@ -496,16 +768,6 @@ public interface GroupeidmPackage extends EPackage {
 	 * @ordered
 	 */
 	int REPOSITORY_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.chapitreImpl <em>chapitre</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.chapitreImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getchapitre()
-	 * @generated
-	 */
-	int CHAPITRE = 10;
 
 	/**
 	 * The feature id for the '<em><b>Page</b></em>' containment reference list.
@@ -526,13 +788,22 @@ public interface GroupeidmPackage extends EPackage {
 	int CHAPITRE__TRACKING = 1;
 
 	/**
+	 * The feature id for the '<em><b>Name Chp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CHAPITRE__NAME_CHP = 2;
+
+	/**
 	 * The number of structural features of the '<em>chapitre</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CHAPITRE_FEATURE_COUNT = 2;
+	int CHAPITRE_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>chapitre</em>' class.
@@ -542,16 +813,6 @@ public interface GroupeidmPackage extends EPackage {
 	 * @ordered
 	 */
 	int CHAPITRE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.moduleImpl <em>module</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.moduleImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getmodule()
-	 * @generated
-	 */
-	int MODULE = 11;
 
 	/**
 	 * The feature id for the '<em><b>Fromation</b></em>' reference.
@@ -590,13 +851,31 @@ public interface GroupeidmPackage extends EPackage {
 	int MODULE__TRACKING = 3;
 
 	/**
+	 * The feature id for the '<em><b>Coeff</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__COEFF = 4;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MODULE__LEVEL = 5;
+
+	/**
 	 * The number of structural features of the '<em>module</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int MODULE_FEATURE_COUNT = 4;
+	int MODULE_FEATURE_COUNT = 6;
 
 	/**
 	 * The number of operations of the '<em>module</em>' class.
@@ -608,14 +887,13 @@ public interface GroupeidmPackage extends EPackage {
 	int MODULE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.pageImpl <em>page</em>}' class.
+	 * The feature id for the '<em><b>Number Pg</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.pageImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getpage()
 	 * @generated
+	 * @ordered
 	 */
-	int PAGE = 12;
+	int PAGE__NUMBER_PG = 0;
 
 	/**
 	 * The number of structural features of the '<em>page</em>' class.
@@ -624,7 +902,7 @@ public interface GroupeidmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_FEATURE_COUNT = 0;
+	int PAGE_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>page</em>' class.
@@ -634,16 +912,6 @@ public interface GroupeidmPackage extends EPackage {
 	 * @ordered
 	 */
 	int PAGE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.trackingImpl <em>tracking</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.trackingImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#gettracking()
-	 * @generated
-	 */
-	int TRACKING = 13;
 
 	/**
 	 * The feature id for the '<em><b>Module</b></em>' reference.
@@ -700,16 +968,6 @@ public interface GroupeidmPackage extends EPackage {
 	int TRACKING_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl <em>etudiant</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getetudiant()
-	 * @generated
-	 */
-	int ETUDIANT = 14;
-
-	/**
 	 * The feature id for the '<em><b>Profil</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -764,13 +1022,67 @@ public interface GroupeidmPackage extends EPackage {
 	int ETUDIANT__GROUPE = 5;
 
 	/**
+	 * The feature id for the '<em><b>First Name Et</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETUDIANT__FIRST_NAME_ET = 6;
+
+	/**
+	 * The feature id for the '<em><b>Last Name Et</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETUDIANT__LAST_NAME_ET = 7;
+
+	/**
+	 * The feature id for the '<em><b>Num Et</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETUDIANT__NUM_ET = 8;
+
+	/**
+	 * The feature id for the '<em><b>Classe</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETUDIANT__CLASSE = 9;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETUDIANT__LEVEL = 10;
+
+	/**
+	 * The feature id for the '<em><b>Note</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ETUDIANT__NOTE = 11;
+
+	/**
 	 * The number of structural features of the '<em>etudiant</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ETUDIANT_FEATURE_COUNT = 6;
+	int ETUDIANT_FEATURE_COUNT = 12;
 
 	/**
 	 * The number of operations of the '<em>etudiant</em>' class.
@@ -780,16 +1092,6 @@ public interface GroupeidmPackage extends EPackage {
 	 * @ordered
 	 */
 	int ETUDIANT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.connecteImpl <em>connecte</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.connecteImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getconnecte()
-	 * @generated
-	 */
-	int CONNECTE = 15;
 
 	/**
 	 * The feature id for the '<em><b>Profil</b></em>' containment reference list.
@@ -846,6 +1148,60 @@ public interface GroupeidmPackage extends EPackage {
 	int CONNECTE__GROUPE = ETUDIANT__GROUPE;
 
 	/**
+	 * The feature id for the '<em><b>First Name Et</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTE__FIRST_NAME_ET = ETUDIANT__FIRST_NAME_ET;
+
+	/**
+	 * The feature id for the '<em><b>Last Name Et</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTE__LAST_NAME_ET = ETUDIANT__LAST_NAME_ET;
+
+	/**
+	 * The feature id for the '<em><b>Num Et</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTE__NUM_ET = ETUDIANT__NUM_ET;
+
+	/**
+	 * The feature id for the '<em><b>Classe</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTE__CLASSE = ETUDIANT__CLASSE;
+
+	/**
+	 * The feature id for the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTE__LEVEL = ETUDIANT__LEVEL;
+
+	/**
+	 * The feature id for the '<em><b>Note</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTE__NOTE = ETUDIANT__NOTE;
+
+	/**
 	 * The feature id for the '<em><b>Tracking</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -855,13 +1211,22 @@ public interface GroupeidmPackage extends EPackage {
 	int CONNECTE__TRACKING = ETUDIANT_FEATURE_COUNT + 0;
 
 	/**
+	 * The feature id for the '<em><b>Is Connect</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int CONNECTE__IS_CONNECT = ETUDIANT_FEATURE_COUNT + 1;
+
+	/**
 	 * The number of structural features of the '<em>connecte</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CONNECTE_FEATURE_COUNT = ETUDIANT_FEATURE_COUNT + 1;
+	int CONNECTE_FEATURE_COUNT = ETUDIANT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>connecte</em>' class.
@@ -873,14 +1238,31 @@ public interface GroupeidmPackage extends EPackage {
 	int CONNECTE_OPERATION_COUNT = ETUDIANT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link fr.obeo.dsl.projet.groupeidm.impl.profilImpl <em>profil</em>}' class.
+	 * The feature id for the '<em><b>Avatar</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.profilImpl
-	 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getprofil()
 	 * @generated
+	 * @ordered
 	 */
-	int PROFIL = 16;
+	int PROFIL__AVATAR = 0;
+
+	/**
+	 * The feature id for the '<em><b>City</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIL__CITY = 1;
+
+	/**
+	 * The feature id for the '<em><b>Tel</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PROFIL__TEL = 2;
 
 	/**
 	 * The number of structural features of the '<em>profil</em>' class.
@@ -889,7 +1271,7 @@ public interface GroupeidmPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PROFIL_FEATURE_COUNT = 0;
+	int PROFIL_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>profil</em>' class.
@@ -988,6 +1370,17 @@ public interface GroupeidmPackage extends EPackage {
 	EReference getgroupe_Etudiant();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.groupe#getNameGp <em>Name Gp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Gp</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.groupe#getNameGp()
+	 * @see #getgroupe()
+	 * @generated
+	 */
+	EAttribute getgroupe_NameGp();
+
+	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.admin <em>admin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1009,15 +1402,37 @@ public interface GroupeidmPackage extends EPackage {
 	EReference getadmin_Groupe();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.obeo.dsl.projet.groupeidm.admin#getFromation <em>Fromation</em>}'.
+	 * Returns the meta object for the reference '{@link fr.obeo.dsl.projet.groupeidm.admin#getFormation <em>Formation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Fromation</em>'.
-	 * @see fr.obeo.dsl.projet.groupeidm.admin#getFromation()
+	 * @return the meta object for the reference '<em>Formation</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.admin#getFormation()
 	 * @see #getadmin()
 	 * @generated
 	 */
-	EReference getadmin_Fromation();
+	EReference getadmin_Formation();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.admin#getNameAdm <em>Name Adm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Adm</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.admin#getNameAdm()
+	 * @see #getadmin()
+	 * @generated
+	 */
+	EAttribute getadmin_NameAdm();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.admin#getPasswordAdm <em>Password Adm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password Adm</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.admin#getPasswordAdm()
+	 * @see #getadmin()
+	 * @generated
+	 */
+	EAttribute getadmin_PasswordAdm();
 
 	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.auteur <em>auteur</em>}'.
@@ -1041,6 +1456,17 @@ public interface GroupeidmPackage extends EPackage {
 	EReference getauteur_Module();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.auteur#getNameAtr <em>Name Atr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Atr</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.auteur#getNameAtr()
+	 * @see #getauteur()
+	 * @generated
+	 */
+	EAttribute getauteur_NameAtr();
+
+	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.membre <em>membre</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1051,36 +1477,80 @@ public interface GroupeidmPackage extends EPackage {
 	EClass getmembre();
 
 	/**
-	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.fromation <em>fromation</em>}'.
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.membre#getCounts <em>Counts</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>fromation</em>'.
-	 * @see fr.obeo.dsl.projet.groupeidm.fromation
+	 * @return the meta object for the attribute '<em>Counts</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.membre#getCounts()
+	 * @see #getmembre()
 	 * @generated
 	 */
-	EClass getfromation();
+	EAttribute getmembre_Counts();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.obeo.dsl.projet.groupeidm.fromation#getAdmin <em>Admin</em>}'.
+	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.formation <em>formation</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>formation</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.formation
+	 * @generated
+	 */
+	EClass getformation();
+
+	/**
+	 * Returns the meta object for the reference '{@link fr.obeo.dsl.projet.groupeidm.formation#getAdmin <em>Admin</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Admin</em>'.
-	 * @see fr.obeo.dsl.projet.groupeidm.fromation#getAdmin()
-	 * @see #getfromation()
+	 * @see fr.obeo.dsl.projet.groupeidm.formation#getAdmin()
+	 * @see #getformation()
 	 * @generated
 	 */
-	EReference getfromation_Admin();
+	EReference getformation_Admin();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.obeo.dsl.projet.groupeidm.fromation#getModule <em>Module</em>}'.
+	 * Returns the meta object for the reference '{@link fr.obeo.dsl.projet.groupeidm.formation#getModule <em>Module</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the reference '<em>Module</em>'.
-	 * @see fr.obeo.dsl.projet.groupeidm.fromation#getModule()
-	 * @see #getfromation()
+	 * @see fr.obeo.dsl.projet.groupeidm.formation#getModule()
+	 * @see #getformation()
 	 * @generated
 	 */
-	EReference getfromation_Module();
+	EReference getformation_Module();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.formation#getNameFrm <em>Name Frm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Frm</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.formation#getNameFrm()
+	 * @see #getformation()
+	 * @generated
+	 */
+	EAttribute getformation_NameFrm();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.formation#getType <em>Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Type</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.formation#getType()
+	 * @see #getformation()
+	 * @generated
+	 */
+	EAttribute getformation_Type();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.formation#getDuration <em>Duration</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Duration</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.formation#getDuration()
+	 * @see #getformation()
+	 * @generated
+	 */
+	EAttribute getformation_Duration();
 
 	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.tuteur <em>tuteur</em>}'.
@@ -1115,6 +1585,50 @@ public interface GroupeidmPackage extends EPackage {
 	EReference gettuteur_Groupe();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.tuteur#getFirstNameTr <em>First Name Tr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>First Name Tr</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.tuteur#getFirstNameTr()
+	 * @see #gettuteur()
+	 * @generated
+	 */
+	EAttribute gettuteur_FirstNameTr();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.tuteur#getLastNameTr <em>Last Name Tr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Last Name Tr</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.tuteur#getLastNameTr()
+	 * @see #gettuteur()
+	 * @generated
+	 */
+	EAttribute gettuteur_LastNameTr();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.tuteur#getNumTr <em>Num Tr</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Num Tr</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.tuteur#getNumTr()
+	 * @see #gettuteur()
+	 * @generated
+	 */
+	EAttribute gettuteur_NumTr();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.tuteur#getMatiere <em>Matiere</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Matiere</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.tuteur#getMatiere()
+	 * @see #gettuteur()
+	 * @generated
+	 */
+	EAttribute gettuteur_Matiere();
+
+	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.forum <em>forum</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1134,6 +1648,28 @@ public interface GroupeidmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getforum_Etudiant();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.forum#getNameFrm <em>Name Frm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Frm</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.forum#getNameFrm()
+	 * @see #getforum()
+	 * @generated
+	 */
+	EAttribute getforum_NameFrm();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.forum#getContenuFrm <em>Contenu Frm</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Contenu Frm</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.forum#getContenuFrm()
+	 * @see #getforum()
+	 * @generated
+	 */
+	EAttribute getforum_ContenuFrm();
 
 	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.chat <em>chat</em>}'.
@@ -1157,6 +1693,28 @@ public interface GroupeidmPackage extends EPackage {
 	EReference getchat_Etudiant();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.chat#getPseudoChat <em>Pseudo Chat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Pseudo Chat</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.chat#getPseudoChat()
+	 * @see #getchat()
+	 * @generated
+	 */
+	EAttribute getchat_PseudoChat();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.chat#isStatus <em>Status</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Status</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.chat#isStatus()
+	 * @see #getchat()
+	 * @generated
+	 */
+	EAttribute getchat_Status();
+
+	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.mail <em>mail</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1178,6 +1736,28 @@ public interface GroupeidmPackage extends EPackage {
 	EReference getmail_Etudiant();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.mail#getAdresseMail <em>Adresse Mail</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Adresse Mail</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.mail#getAdresseMail()
+	 * @see #getmail()
+	 * @generated
+	 */
+	EAttribute getmail_AdresseMail();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.mail#getPassword <em>Password</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Password</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.mail#getPassword()
+	 * @see #getmail()
+	 * @generated
+	 */
+	EAttribute getmail_Password();
+
+	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.repository <em>repository</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1197,6 +1777,17 @@ public interface GroupeidmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getrepository_Etudiant();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.repository#getNameRp <em>Name Rp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Rp</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.repository#getNameRp()
+	 * @see #getrepository()
+	 * @generated
+	 */
+	EAttribute getrepository_NameRp();
 
 	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.chapitre <em>chapitre</em>}'.
@@ -1229,6 +1820,17 @@ public interface GroupeidmPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getchapitre_Tracking();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.chapitre#getNameChp <em>Name Chp</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name Chp</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.chapitre#getNameChp()
+	 * @see #getchapitre()
+	 * @generated
+	 */
+	EAttribute getchapitre_NameChp();
 
 	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.module <em>module</em>}'.
@@ -1285,6 +1887,28 @@ public interface GroupeidmPackage extends EPackage {
 	EReference getmodule_Tracking();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.module#getCoeff <em>Coeff</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Coeff</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.module#getCoeff()
+	 * @see #getmodule()
+	 * @generated
+	 */
+	EAttribute getmodule_Coeff();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.module#getLevel <em>Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Level</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.module#getLevel()
+	 * @see #getmodule()
+	 * @generated
+	 */
+	EAttribute getmodule_Level();
+
+	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.page <em>page</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1293,6 +1917,17 @@ public interface GroupeidmPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getpage();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.page#getNumberPg <em>Number Pg</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Number Pg</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.page#getNumberPg()
+	 * @see #getpage()
+	 * @generated
+	 */
+	EAttribute getpage_NumberPg();
 
 	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.tracking <em>tracking</em>}'.
@@ -1425,6 +2060,72 @@ public interface GroupeidmPackage extends EPackage {
 	EReference getetudiant_Groupe();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getFirstNameEt <em>First Name Et</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>First Name Et</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.etudiant#getFirstNameEt()
+	 * @see #getetudiant()
+	 * @generated
+	 */
+	EAttribute getetudiant_FirstNameEt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getLastNameEt <em>Last Name Et</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Last Name Et</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.etudiant#getLastNameEt()
+	 * @see #getetudiant()
+	 * @generated
+	 */
+	EAttribute getetudiant_LastNameEt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getNumEt <em>Num Et</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Num Et</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.etudiant#getNumEt()
+	 * @see #getetudiant()
+	 * @generated
+	 */
+	EAttribute getetudiant_NumEt();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getClasse <em>Classe</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Classe</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.etudiant#getClasse()
+	 * @see #getetudiant()
+	 * @generated
+	 */
+	EAttribute getetudiant_Classe();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getLevel <em>Level</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Level</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.etudiant#getLevel()
+	 * @see #getetudiant()
+	 * @generated
+	 */
+	EAttribute getetudiant_Level();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getNote <em>Note</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Note</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.etudiant#getNote()
+	 * @see #getetudiant()
+	 * @generated
+	 */
+	EAttribute getetudiant_Note();
+
+	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.connecte <em>connecte</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1446,6 +2147,17 @@ public interface GroupeidmPackage extends EPackage {
 	EReference getconnecte_Tracking();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.connecte#isIsConnect <em>Is Connect</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Is Connect</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.connecte#isIsConnect()
+	 * @see #getconnecte()
+	 * @generated
+	 */
+	EAttribute getconnecte_IsConnect();
+
+	/**
 	 * Returns the meta object for class '{@link fr.obeo.dsl.projet.groupeidm.profil <em>profil</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1454,6 +2166,39 @@ public interface GroupeidmPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getprofil();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.profil#getAvatar <em>Avatar</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Avatar</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.profil#getAvatar()
+	 * @see #getprofil()
+	 * @generated
+	 */
+	EAttribute getprofil_Avatar();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.profil#getCity <em>City</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>City</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.profil#getCity()
+	 * @see #getprofil()
+	 * @generated
+	 */
+	EAttribute getprofil_City();
+
+	/**
+	 * Returns the meta object for the attribute '{@link fr.obeo.dsl.projet.groupeidm.profil#getTel <em>Tel</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Tel</em>'.
+	 * @see fr.obeo.dsl.projet.groupeidm.profil#getTel()
+	 * @see #getprofil()
+	 * @generated
+	 */
+	EAttribute getprofil_Tel();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -1545,6 +2290,14 @@ public interface GroupeidmPackage extends EPackage {
 		EReference GROUPE__ETUDIANT = eINSTANCE.getgroupe_Etudiant();
 
 		/**
+		 * The meta object literal for the '<em><b>Name Gp</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute GROUPE__NAME_GP = eINSTANCE.getgroupe_NameGp();
+
+		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.adminImpl <em>admin</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1563,12 +2316,28 @@ public interface GroupeidmPackage extends EPackage {
 		EReference ADMIN__GROUPE = eINSTANCE.getadmin_Groupe();
 
 		/**
-		 * The meta object literal for the '<em><b>Fromation</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Formation</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference ADMIN__FROMATION = eINSTANCE.getadmin_Fromation();
+		EReference ADMIN__FORMATION = eINSTANCE.getadmin_Formation();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Adm</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ADMIN__NAME_ADM = eINSTANCE.getadmin_NameAdm();
+
+		/**
+		 * The meta object literal for the '<em><b>Password Adm</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ADMIN__PASSWORD_ADM = eINSTANCE.getadmin_PasswordAdm();
 
 		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.auteurImpl <em>auteur</em>}' class.
@@ -1589,6 +2358,14 @@ public interface GroupeidmPackage extends EPackage {
 		EReference AUTEUR__MODULE = eINSTANCE.getauteur_Module();
 
 		/**
+		 * The meta object literal for the '<em><b>Name Atr</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute AUTEUR__NAME_ATR = eINSTANCE.getauteur_NameAtr();
+
+		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.membreImpl <em>membre</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1599,14 +2376,22 @@ public interface GroupeidmPackage extends EPackage {
 		EClass MEMBRE = eINSTANCE.getmembre();
 
 		/**
-		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.fromationImpl <em>fromation</em>}' class.
+		 * The meta object literal for the '<em><b>Counts</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fr.obeo.dsl.projet.groupeidm.impl.fromationImpl
-		 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getfromation()
 		 * @generated
 		 */
-		EClass FROMATION = eINSTANCE.getfromation();
+		EAttribute MEMBRE__COUNTS = eINSTANCE.getmembre_Counts();
+
+		/**
+		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.formationImpl <em>formation</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see fr.obeo.dsl.projet.groupeidm.impl.formationImpl
+		 * @see fr.obeo.dsl.projet.groupeidm.impl.GroupeidmPackageImpl#getformation()
+		 * @generated
+		 */
+		EClass FORMATION = eINSTANCE.getformation();
 
 		/**
 		 * The meta object literal for the '<em><b>Admin</b></em>' reference feature.
@@ -1614,7 +2399,7 @@ public interface GroupeidmPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FROMATION__ADMIN = eINSTANCE.getfromation_Admin();
+		EReference FORMATION__ADMIN = eINSTANCE.getformation_Admin();
 
 		/**
 		 * The meta object literal for the '<em><b>Module</b></em>' reference feature.
@@ -1622,7 +2407,31 @@ public interface GroupeidmPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference FROMATION__MODULE = eINSTANCE.getfromation_Module();
+		EReference FORMATION__MODULE = eINSTANCE.getformation_Module();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Frm</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORMATION__NAME_FRM = eINSTANCE.getformation_NameFrm();
+
+		/**
+		 * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORMATION__TYPE = eINSTANCE.getformation_Type();
+
+		/**
+		 * The meta object literal for the '<em><b>Duration</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORMATION__DURATION = eINSTANCE.getformation_Duration();
 
 		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.tuteurImpl <em>tuteur</em>}' class.
@@ -1651,6 +2460,38 @@ public interface GroupeidmPackage extends EPackage {
 		EReference TUTEUR__GROUPE = eINSTANCE.gettuteur_Groupe();
 
 		/**
+		 * The meta object literal for the '<em><b>First Name Tr</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TUTEUR__FIRST_NAME_TR = eINSTANCE.gettuteur_FirstNameTr();
+
+		/**
+		 * The meta object literal for the '<em><b>Last Name Tr</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TUTEUR__LAST_NAME_TR = eINSTANCE.gettuteur_LastNameTr();
+
+		/**
+		 * The meta object literal for the '<em><b>Num Tr</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TUTEUR__NUM_TR = eINSTANCE.gettuteur_NumTr();
+
+		/**
+		 * The meta object literal for the '<em><b>Matiere</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TUTEUR__MATIERE = eINSTANCE.gettuteur_Matiere();
+
+		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.forumImpl <em>forum</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1667,6 +2508,22 @@ public interface GroupeidmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference FORUM__ETUDIANT = eINSTANCE.getforum_Etudiant();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Frm</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORUM__NAME_FRM = eINSTANCE.getforum_NameFrm();
+
+		/**
+		 * The meta object literal for the '<em><b>Contenu Frm</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute FORUM__CONTENU_FRM = eINSTANCE.getforum_ContenuFrm();
 
 		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.chatImpl <em>chat</em>}' class.
@@ -1687,6 +2544,22 @@ public interface GroupeidmPackage extends EPackage {
 		EReference CHAT__ETUDIANT = eINSTANCE.getchat_Etudiant();
 
 		/**
+		 * The meta object literal for the '<em><b>Pseudo Chat</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHAT__PSEUDO_CHAT = eINSTANCE.getchat_PseudoChat();
+
+		/**
+		 * The meta object literal for the '<em><b>Status</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHAT__STATUS = eINSTANCE.getchat_Status();
+
+		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.mailImpl <em>mail</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1705,6 +2578,22 @@ public interface GroupeidmPackage extends EPackage {
 		EReference MAIL__ETUDIANT = eINSTANCE.getmail_Etudiant();
 
 		/**
+		 * The meta object literal for the '<em><b>Adresse Mail</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MAIL__ADRESSE_MAIL = eINSTANCE.getmail_AdresseMail();
+
+		/**
+		 * The meta object literal for the '<em><b>Password</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MAIL__PASSWORD = eINSTANCE.getmail_Password();
+
+		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.repositoryImpl <em>repository</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1721,6 +2610,14 @@ public interface GroupeidmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference REPOSITORY__ETUDIANT = eINSTANCE.getrepository_Etudiant();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Rp</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute REPOSITORY__NAME_RP = eINSTANCE.getrepository_NameRp();
 
 		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.chapitreImpl <em>chapitre</em>}' class.
@@ -1747,6 +2644,14 @@ public interface GroupeidmPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CHAPITRE__TRACKING = eINSTANCE.getchapitre_Tracking();
+
+		/**
+		 * The meta object literal for the '<em><b>Name Chp</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CHAPITRE__NAME_CHP = eINSTANCE.getchapitre_NameChp();
 
 		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.moduleImpl <em>module</em>}' class.
@@ -1791,6 +2696,22 @@ public interface GroupeidmPackage extends EPackage {
 		EReference MODULE__TRACKING = eINSTANCE.getmodule_Tracking();
 
 		/**
+		 * The meta object literal for the '<em><b>Coeff</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__COEFF = eINSTANCE.getmodule_Coeff();
+
+		/**
+		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute MODULE__LEVEL = eINSTANCE.getmodule_Level();
+
+		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.pageImpl <em>page</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1799,6 +2720,14 @@ public interface GroupeidmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PAGE = eINSTANCE.getpage();
+
+		/**
+		 * The meta object literal for the '<em><b>Number Pg</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PAGE__NUMBER_PG = eINSTANCE.getpage_NumberPg();
 
 		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.trackingImpl <em>tracking</em>}' class.
@@ -1901,6 +2830,54 @@ public interface GroupeidmPackage extends EPackage {
 		EReference ETUDIANT__GROUPE = eINSTANCE.getetudiant_Groupe();
 
 		/**
+		 * The meta object literal for the '<em><b>First Name Et</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETUDIANT__FIRST_NAME_ET = eINSTANCE.getetudiant_FirstNameEt();
+
+		/**
+		 * The meta object literal for the '<em><b>Last Name Et</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETUDIANT__LAST_NAME_ET = eINSTANCE.getetudiant_LastNameEt();
+
+		/**
+		 * The meta object literal for the '<em><b>Num Et</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETUDIANT__NUM_ET = eINSTANCE.getetudiant_NumEt();
+
+		/**
+		 * The meta object literal for the '<em><b>Classe</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETUDIANT__CLASSE = eINSTANCE.getetudiant_Classe();
+
+		/**
+		 * The meta object literal for the '<em><b>Level</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETUDIANT__LEVEL = eINSTANCE.getetudiant_Level();
+
+		/**
+		 * The meta object literal for the '<em><b>Note</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute ETUDIANT__NOTE = eINSTANCE.getetudiant_Note();
+
+		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.connecteImpl <em>connecte</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1919,6 +2896,14 @@ public interface GroupeidmPackage extends EPackage {
 		EReference CONNECTE__TRACKING = eINSTANCE.getconnecte_Tracking();
 
 		/**
+		 * The meta object literal for the '<em><b>Is Connect</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute CONNECTE__IS_CONNECT = eINSTANCE.getconnecte_IsConnect();
+
+		/**
 		 * The meta object literal for the '{@link fr.obeo.dsl.projet.groupeidm.impl.profilImpl <em>profil</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1927,6 +2912,30 @@ public interface GroupeidmPackage extends EPackage {
 		 * @generated
 		 */
 		EClass PROFIL = eINSTANCE.getprofil();
+
+		/**
+		 * The meta object literal for the '<em><b>Avatar</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROFIL__AVATAR = eINSTANCE.getprofil_Avatar();
+
+		/**
+		 * The meta object literal for the '<em><b>City</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROFIL__CITY = eINSTANCE.getprofil_City();
+
+		/**
+		 * The meta object literal for the '<em><b>Tel</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PROFIL__TEL = eINSTANCE.getprofil_Tel();
 
 	}
 

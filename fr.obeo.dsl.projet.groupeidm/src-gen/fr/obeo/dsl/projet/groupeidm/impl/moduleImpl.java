@@ -5,7 +5,7 @@ package fr.obeo.dsl.projet.groupeidm.impl;
 import fr.obeo.dsl.projet.groupeidm.GroupeidmPackage;
 import fr.obeo.dsl.projet.groupeidm.auteur;
 import fr.obeo.dsl.projet.groupeidm.chapitre;
-import fr.obeo.dsl.projet.groupeidm.fromation;
+import fr.obeo.dsl.projet.groupeidm.formation;
 import fr.obeo.dsl.projet.groupeidm.module;
 import fr.obeo.dsl.projet.groupeidm.tracking;
 
@@ -37,6 +37,8 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.moduleImpl#getAuteur <em>Auteur</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.moduleImpl#getChapitre <em>Chapitre</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.moduleImpl#getTracking <em>Tracking</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.moduleImpl#getCoeff <em>Coeff</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.moduleImpl#getLevel <em>Level</em>}</li>
  * </ul>
  *
  * @generated
@@ -50,7 +52,7 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 	 * @generated
 	 * @ordered
 	 */
-	protected fromation fromation;
+	protected formation fromation;
 
 	/**
 	 * The cached value of the '{@link #getAuteur() <em>Auteur</em>}' reference.
@@ -83,6 +85,46 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 	protected tracking tracking;
 
 	/**
+	 * The default value of the '{@link #getCoeff() <em>Coeff</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoeff()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int COEFF_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getCoeff() <em>Coeff</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getCoeff()
+	 * @generated
+	 * @ordered
+	 */
+	protected int coeff = COEFF_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLevel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LEVEL_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLevel() <em>Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLevel()
+	 * @generated
+	 * @ordered
+	 */
+	protected String level = LEVEL_EDEFAULT;
+
+	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -106,10 +148,10 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public fromation getFromation() {
+	public formation getFromation() {
 		if (fromation != null && fromation.eIsProxy()) {
 			InternalEObject oldFromation = (InternalEObject) fromation;
-			fromation = (fromation) eResolveProxy(oldFromation);
+			fromation = (formation) eResolveProxy(oldFromation);
 			if (fromation != oldFromation) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE, GroupeidmPackage.MODULE__FROMATION,
@@ -124,7 +166,7 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public fromation basicGetFromation() {
+	public formation basicGetFromation() {
 		return fromation;
 	}
 
@@ -133,8 +175,8 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetFromation(fromation newFromation, NotificationChain msgs) {
-		fromation oldFromation = fromation;
+	public NotificationChain basicSetFromation(formation newFromation, NotificationChain msgs) {
+		formation oldFromation = fromation;
 		fromation = newFromation;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
@@ -152,15 +194,15 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setFromation(fromation newFromation) {
+	public void setFromation(formation newFromation) {
 		if (newFromation != fromation) {
 			NotificationChain msgs = null;
 			if (fromation != null)
-				msgs = ((InternalEObject) fromation).eInverseRemove(this, GroupeidmPackage.FROMATION__MODULE,
-						fromation.class, msgs);
+				msgs = ((InternalEObject) fromation).eInverseRemove(this, GroupeidmPackage.FORMATION__MODULE,
+						formation.class, msgs);
 			if (newFromation != null)
-				msgs = ((InternalEObject) newFromation).eInverseAdd(this, GroupeidmPackage.FROMATION__MODULE,
-						fromation.class, msgs);
+				msgs = ((InternalEObject) newFromation).eInverseAdd(this, GroupeidmPackage.FORMATION__MODULE,
+						formation.class, msgs);
 			msgs = basicSetFromation(newFromation, msgs);
 			if (msgs != null)
 				msgs.dispatch();
@@ -322,14 +364,56 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public int getCoeff() {
+		return coeff;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setCoeff(int newCoeff) {
+		int oldCoeff = coeff;
+		coeff = newCoeff;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.MODULE__COEFF, oldCoeff, coeff));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLevel() {
+		return level;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel(String newLevel) {
+		String oldLevel = level;
+		level = newLevel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.MODULE__LEVEL, oldLevel, level));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case GroupeidmPackage.MODULE__FROMATION:
 			if (fromation != null)
-				msgs = ((InternalEObject) fromation).eInverseRemove(this, GroupeidmPackage.FROMATION__MODULE,
-						fromation.class, msgs);
-			return basicSetFromation((fromation) otherEnd, msgs);
+				msgs = ((InternalEObject) fromation).eInverseRemove(this, GroupeidmPackage.FORMATION__MODULE,
+						formation.class, msgs);
+			return basicSetFromation((formation) otherEnd, msgs);
 		case GroupeidmPackage.MODULE__AUTEUR:
 			if (auteur != null)
 				msgs = ((InternalEObject) auteur).eInverseRemove(this, GroupeidmPackage.AUTEUR__MODULE, auteur.class,
@@ -386,6 +470,10 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 			if (resolve)
 				return getTracking();
 			return basicGetTracking();
+		case GroupeidmPackage.MODULE__COEFF:
+			return getCoeff();
+		case GroupeidmPackage.MODULE__LEVEL:
+			return getLevel();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -400,7 +488,7 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
 		case GroupeidmPackage.MODULE__FROMATION:
-			setFromation((fromation) newValue);
+			setFromation((formation) newValue);
 			return;
 		case GroupeidmPackage.MODULE__AUTEUR:
 			setAuteur((auteur) newValue);
@@ -411,6 +499,12 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 			return;
 		case GroupeidmPackage.MODULE__TRACKING:
 			setTracking((tracking) newValue);
+			return;
+		case GroupeidmPackage.MODULE__COEFF:
+			setCoeff((Integer) newValue);
+			return;
+		case GroupeidmPackage.MODULE__LEVEL:
+			setLevel((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -425,7 +519,7 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 	public void eUnset(int featureID) {
 		switch (featureID) {
 		case GroupeidmPackage.MODULE__FROMATION:
-			setFromation((fromation) null);
+			setFromation((formation) null);
 			return;
 		case GroupeidmPackage.MODULE__AUTEUR:
 			setAuteur((auteur) null);
@@ -435,6 +529,12 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 			return;
 		case GroupeidmPackage.MODULE__TRACKING:
 			setTracking((tracking) null);
+			return;
+		case GroupeidmPackage.MODULE__COEFF:
+			setCoeff(COEFF_EDEFAULT);
+			return;
+		case GroupeidmPackage.MODULE__LEVEL:
+			setLevel(LEVEL_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -456,8 +556,31 @@ public class moduleImpl extends MinimalEObjectImpl.Container implements module {
 			return chapitre != null && !chapitre.isEmpty();
 		case GroupeidmPackage.MODULE__TRACKING:
 			return tracking != null;
+		case GroupeidmPackage.MODULE__COEFF:
+			return coeff != COEFF_EDEFAULT;
+		case GroupeidmPackage.MODULE__LEVEL:
+			return LEVEL_EDEFAULT == null ? level != null : !LEVEL_EDEFAULT.equals(level);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (coeff: ");
+		result.append(coeff);
+		result.append(", Level: ");
+		result.append(level);
+		result.append(')');
+		return result.toString();
 	}
 
 } //moduleImpl

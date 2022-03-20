@@ -43,11 +43,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.groupeImpl#getForum <em>Forum</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.groupeImpl#getTuteur <em>Tuteur</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.groupeImpl#getEtudiant <em>Etudiant</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.groupeImpl#getNameGp <em>Name Gp</em>}</li>
  * </ul>
  *
  * @generated
  */
-public abstract class groupeImpl extends MinimalEObjectImpl.Container implements groupe {
+public class groupeImpl extends MinimalEObjectImpl.Container implements groupe {
 	/**
 	 * The cached value of the '{@link #getAdmin() <em>Admin</em>}' reference.
 	 * <!-- begin-user-doc -->
@@ -117,6 +118,26 @@ public abstract class groupeImpl extends MinimalEObjectImpl.Container implements
 	 * @ordered
 	 */
 	protected etudiant etudiant;
+
+	/**
+	 * The default value of the '{@link #getNameGp() <em>Name Gp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameGp()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_GP_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNameGp() <em>Name Gp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameGp()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameGp = NAME_GP_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -394,6 +415,27 @@ public abstract class groupeImpl extends MinimalEObjectImpl.Container implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getNameGp() {
+		return nameGp;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameGp(String newNameGp) {
+		String oldNameGp = nameGp;
+		nameGp = newNameGp;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.GROUPE__NAME_GP, oldNameGp, nameGp));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -470,6 +512,8 @@ public abstract class groupeImpl extends MinimalEObjectImpl.Container implements
 			if (resolve)
 				return getEtudiant();
 			return basicGetEtudiant();
+		case GroupeidmPackage.GROUPE__NAME_GP:
+			return getNameGp();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -508,6 +552,9 @@ public abstract class groupeImpl extends MinimalEObjectImpl.Container implements
 		case GroupeidmPackage.GROUPE__ETUDIANT:
 			setEtudiant((etudiant) newValue);
 			return;
+		case GroupeidmPackage.GROUPE__NAME_GP:
+			setNameGp((String) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -541,6 +588,9 @@ public abstract class groupeImpl extends MinimalEObjectImpl.Container implements
 		case GroupeidmPackage.GROUPE__ETUDIANT:
 			setEtudiant((etudiant) null);
 			return;
+		case GroupeidmPackage.GROUPE__NAME_GP:
+			setNameGp(NAME_GP_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -567,8 +617,27 @@ public abstract class groupeImpl extends MinimalEObjectImpl.Container implements
 			return tuteur != null;
 		case GroupeidmPackage.GROUPE__ETUDIANT:
 			return etudiant != null;
+		case GroupeidmPackage.GROUPE__NAME_GP:
+			return NAME_GP_EDEFAULT == null ? nameGp != null : !NAME_GP_EDEFAULT.equals(nameGp);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (nameGp: ");
+		result.append(nameGp);
+		result.append(')');
+		return result.toString();
 	}
 
 } //groupeImpl

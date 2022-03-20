@@ -12,6 +12,7 @@ package fr.obeo.dsl.projet.groupeidm;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.auteur#getModule <em>Module</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.auteur#getNameAtr <em>Name Atr</em>}</li>
  * </ul>
  *
  * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getauteur()
@@ -42,5 +43,27 @@ public interface auteur extends membre {
 	 * @generated
 	 */
 	void setModule(module value);
+
+	/**
+	 * Returns the value of the '<em><b>Name Atr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name Atr</em>' attribute.
+	 * @see #setNameAtr(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getauteur_NameAtr()
+	 * @model
+	 * @generated
+	 */
+	String getNameAtr();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.auteur#getNameAtr <em>Name Atr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Atr</em>' attribute.
+	 * @see #getNameAtr()
+	 * @generated
+	 */
+	void setNameAtr(String value);
 
 } // auteur

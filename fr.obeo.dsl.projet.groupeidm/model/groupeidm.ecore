@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="groupeidm" nsURI="http://www.example.org/groupeidm" nsPrefix="groupeidm">
-  <eClassifiers xsi:type="ecore:EClass" name="groupe" abstract="true">
+  <eClassifiers xsi:type="ecore:EClass" name="groupe">
     <eStructuralFeatures xsi:type="ecore:EReference" name="admin" eType="#//admin"
         eOpposite="#//admin/groupe"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="repository" upperBound="-1"
@@ -16,63 +16,89 @@
         eOpposite="#//tuteur/groupe"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="etudiant" eType="#//etudiant"
         eOpposite="#//etudiant/groupe"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameGp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="admin" eSuperTypes="#//membre">
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupe" eType="#//groupe"
         eOpposite="#//groupe/admin"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fromation" eType="#//fromation"
-        eOpposite="#//fromation/admin"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="formation" eType="#//formation"
+        eOpposite="#//formation/admin"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameAdm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="passwordAdm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="auteur" eSuperTypes="#//membre">
     <eStructuralFeatures xsi:type="ecore:EReference" name="module" eType="#//module"
         eOpposite="#//module/auteur"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameAtr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="membre"/>
-  <eClassifiers xsi:type="ecore:EClass" name="fromation">
+  <eClassifiers xsi:type="ecore:EClass" name="membre">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="counts" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="formation">
     <eStructuralFeatures xsi:type="ecore:EReference" name="admin" eType="#//admin"
-        eOpposite="#//admin/fromation"/>
+        eOpposite="#//admin/formation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="module" eType="#//module"
         eOpposite="#//module/fromation"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameFrm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="duration" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDate"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="tuteur" eSuperTypes="#//membre">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tracking" eType="#//tracking"
         eOpposite="#//tracking/tuteur"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupe" eType="#//groupe"
         eOpposite="#//groupe/tuteur"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstNameTr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastNameTr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numTr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="matiere" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="forum">
     <eStructuralFeatures xsi:type="ecore:EReference" name="etudiant" eType="#//etudiant"
         eOpposite="#//etudiant/forum"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameFrm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contenuFrm" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="chat">
     <eStructuralFeatures xsi:type="ecore:EReference" name="etudiant" eType="#//etudiant"
         eOpposite="#//etudiant/chat"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="pseudoChat" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="status" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="mail">
     <eStructuralFeatures xsi:type="ecore:EReference" name="etudiant" eType="#//etudiant"
         eOpposite="#//etudiant/mail"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="adresseMail" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="repository">
     <eStructuralFeatures xsi:type="ecore:EReference" name="etudiant" eType="#//etudiant"
         eOpposite="#//etudiant/repository"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameRp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="chapitre">
     <eStructuralFeatures xsi:type="ecore:EReference" name="page" upperBound="-1" eType="#//page"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tracking" eType="#//tracking"
         eOpposite="#//tracking/chapitre"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nameChp" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="module">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="fromation" eType="#//fromation"
-        eOpposite="#//fromation/module"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromation" eType="#//formation"
+        eOpposite="#//formation/module"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="auteur" eType="#//auteur"
         eOpposite="#//auteur/module"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="chapitre" upperBound="-1"
         eType="#//chapitre" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tracking" eType="#//tracking"
         eOpposite="#//tracking/module"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="coeff" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="page"/>
+  <eClassifiers xsi:type="ecore:EClass" name="page">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numberPg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="tracking">
     <eStructuralFeatures xsi:type="ecore:EReference" name="module" eType="#//module"
         eOpposite="#//module/tracking"/>
@@ -94,10 +120,22 @@
         eOpposite="#//repository/etudiant"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupe" eType="#//groupe"
         eOpposite="#//groupe/etudiant"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="firstNameEt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="lastNameEt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="numEt" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="classe" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="level" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Note" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="connecte" eSuperTypes="#//etudiant">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tracking" eType="#//tracking"
         eOpposite="#//tracking/connecte"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="isConnect" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="profil"/>
+  <eClassifiers xsi:type="ecore:EClass" name="profil">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="avatar" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="city" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tel" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  </eClassifiers>
 </ecore:EPackage>

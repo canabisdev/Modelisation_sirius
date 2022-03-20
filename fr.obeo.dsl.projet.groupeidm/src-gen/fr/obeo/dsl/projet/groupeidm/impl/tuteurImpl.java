@@ -25,6 +25,10 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.tuteurImpl#getTracking <em>Tracking</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.tuteurImpl#getGroupe <em>Groupe</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.tuteurImpl#getFirstNameTr <em>First Name Tr</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.tuteurImpl#getLastNameTr <em>Last Name Tr</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.tuteurImpl#getNumTr <em>Num Tr</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.tuteurImpl#getMatiere <em>Matiere</em>}</li>
  * </ul>
  *
  * @generated
@@ -49,6 +53,86 @@ public class tuteurImpl extends membreImpl implements tuteur {
 	 * @ordered
 	 */
 	protected groupe groupe;
+
+	/**
+	 * The default value of the '{@link #getFirstNameTr() <em>First Name Tr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFirstNameTr()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FIRST_NAME_TR_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFirstNameTr() <em>First Name Tr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFirstNameTr()
+	 * @generated
+	 * @ordered
+	 */
+	protected String firstNameTr = FIRST_NAME_TR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLastNameTr() <em>Last Name Tr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastNameTr()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LAST_NAME_TR_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLastNameTr() <em>Last Name Tr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastNameTr()
+	 * @generated
+	 * @ordered
+	 */
+	protected String lastNameTr = LAST_NAME_TR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNumTr() <em>Num Tr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumTr()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NUM_TR_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getNumTr() <em>Num Tr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumTr()
+	 * @generated
+	 * @ordered
+	 */
+	protected String numTr = NUM_TR_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getMatiere() <em>Matiere</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMatiere()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String MATIERE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getMatiere() <em>Matiere</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getMatiere()
+	 * @generated
+	 * @ordered
+	 */
+	protected String matiere = MATIERE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -210,6 +294,93 @@ public class tuteurImpl extends membreImpl implements tuteur {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getFirstNameTr() {
+		return firstNameTr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFirstNameTr(String newFirstNameTr) {
+		String oldFirstNameTr = firstNameTr;
+		firstNameTr = newFirstNameTr;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.TUTEUR__FIRST_NAME_TR,
+					oldFirstNameTr, firstNameTr));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLastNameTr() {
+		return lastNameTr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastNameTr(String newLastNameTr) {
+		String oldLastNameTr = lastNameTr;
+		lastNameTr = newLastNameTr;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.TUTEUR__LAST_NAME_TR, oldLastNameTr,
+					lastNameTr));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getNumTr() {
+		return numTr;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNumTr(String newNumTr) {
+		String oldNumTr = numTr;
+		numTr = newNumTr;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.TUTEUR__NUM_TR, oldNumTr, numTr));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getMatiere() {
+		return matiere;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setMatiere(String newMatiere) {
+		String oldMatiere = matiere;
+		matiere = newMatiere;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.TUTEUR__MATIERE, oldMatiere,
+					matiere));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -259,6 +430,14 @@ public class tuteurImpl extends membreImpl implements tuteur {
 			if (resolve)
 				return getGroupe();
 			return basicGetGroupe();
+		case GroupeidmPackage.TUTEUR__FIRST_NAME_TR:
+			return getFirstNameTr();
+		case GroupeidmPackage.TUTEUR__LAST_NAME_TR:
+			return getLastNameTr();
+		case GroupeidmPackage.TUTEUR__NUM_TR:
+			return getNumTr();
+		case GroupeidmPackage.TUTEUR__MATIERE:
+			return getMatiere();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -276,6 +455,18 @@ public class tuteurImpl extends membreImpl implements tuteur {
 			return;
 		case GroupeidmPackage.TUTEUR__GROUPE:
 			setGroupe((groupe) newValue);
+			return;
+		case GroupeidmPackage.TUTEUR__FIRST_NAME_TR:
+			setFirstNameTr((String) newValue);
+			return;
+		case GroupeidmPackage.TUTEUR__LAST_NAME_TR:
+			setLastNameTr((String) newValue);
+			return;
+		case GroupeidmPackage.TUTEUR__NUM_TR:
+			setNumTr((String) newValue);
+			return;
+		case GroupeidmPackage.TUTEUR__MATIERE:
+			setMatiere((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -295,6 +486,18 @@ public class tuteurImpl extends membreImpl implements tuteur {
 		case GroupeidmPackage.TUTEUR__GROUPE:
 			setGroupe((groupe) null);
 			return;
+		case GroupeidmPackage.TUTEUR__FIRST_NAME_TR:
+			setFirstNameTr(FIRST_NAME_TR_EDEFAULT);
+			return;
+		case GroupeidmPackage.TUTEUR__LAST_NAME_TR:
+			setLastNameTr(LAST_NAME_TR_EDEFAULT);
+			return;
+		case GroupeidmPackage.TUTEUR__NUM_TR:
+			setNumTr(NUM_TR_EDEFAULT);
+			return;
+		case GroupeidmPackage.TUTEUR__MATIERE:
+			setMatiere(MATIERE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -311,8 +514,39 @@ public class tuteurImpl extends membreImpl implements tuteur {
 			return tracking != null;
 		case GroupeidmPackage.TUTEUR__GROUPE:
 			return groupe != null;
+		case GroupeidmPackage.TUTEUR__FIRST_NAME_TR:
+			return FIRST_NAME_TR_EDEFAULT == null ? firstNameTr != null : !FIRST_NAME_TR_EDEFAULT.equals(firstNameTr);
+		case GroupeidmPackage.TUTEUR__LAST_NAME_TR:
+			return LAST_NAME_TR_EDEFAULT == null ? lastNameTr != null : !LAST_NAME_TR_EDEFAULT.equals(lastNameTr);
+		case GroupeidmPackage.TUTEUR__NUM_TR:
+			return NUM_TR_EDEFAULT == null ? numTr != null : !NUM_TR_EDEFAULT.equals(numTr);
+		case GroupeidmPackage.TUTEUR__MATIERE:
+			return MATIERE_EDEFAULT == null ? matiere != null : !MATIERE_EDEFAULT.equals(matiere);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (firstNameTr: ");
+		result.append(firstNameTr);
+		result.append(", lastNameTr: ");
+		result.append(lastNameTr);
+		result.append(", numTr: ");
+		result.append(numTr);
+		result.append(", matiere: ");
+		result.append(matiere);
+		result.append(')');
+		return result.toString();
 	}
 
 } //tuteurImpl

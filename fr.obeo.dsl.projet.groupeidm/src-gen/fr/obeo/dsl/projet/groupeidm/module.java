@@ -19,6 +19,8 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.module#getAuteur <em>Auteur</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.module#getChapitre <em>Chapitre</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.module#getTracking <em>Tracking</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.module#getCoeff <em>Coeff</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.module#getLevel <em>Level</em>}</li>
  * </ul>
  *
  * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getmodule()
@@ -28,17 +30,17 @@ import org.eclipse.emf.ecore.EObject;
 public interface module extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Fromation</b></em>' reference.
-	 * It is bidirectional and its opposite is '{@link fr.obeo.dsl.projet.groupeidm.fromation#getModule <em>Module</em>}'.
+	 * It is bidirectional and its opposite is '{@link fr.obeo.dsl.projet.groupeidm.formation#getModule <em>Module</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Fromation</em>' reference.
-	 * @see #setFromation(fromation)
+	 * @see #setFromation(formation)
 	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getmodule_Fromation()
-	 * @see fr.obeo.dsl.projet.groupeidm.fromation#getModule
+	 * @see fr.obeo.dsl.projet.groupeidm.formation#getModule
 	 * @model opposite="module"
 	 * @generated
 	 */
-	fromation getFromation();
+	formation getFromation();
 
 	/**
 	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.module#getFromation <em>Fromation</em>}' reference.
@@ -48,7 +50,7 @@ public interface module extends EObject {
 	 * @see #getFromation()
 	 * @generated
 	 */
-	void setFromation(fromation value);
+	void setFromation(formation value);
 
 	/**
 	 * Returns the value of the '<em><b>Auteur</b></em>' reference.
@@ -109,5 +111,49 @@ public interface module extends EObject {
 	 * @generated
 	 */
 	void setTracking(tracking value);
+
+	/**
+	 * Returns the value of the '<em><b>Coeff</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Coeff</em>' attribute.
+	 * @see #setCoeff(int)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getmodule_Coeff()
+	 * @model
+	 * @generated
+	 */
+	int getCoeff();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.module#getCoeff <em>Coeff</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Coeff</em>' attribute.
+	 * @see #getCoeff()
+	 * @generated
+	 */
+	void setCoeff(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Level</em>' attribute.
+	 * @see #setLevel(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getmodule_Level()
+	 * @model
+	 * @generated
+	 */
+	String getLevel();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.module#getLevel <em>Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Level</em>' attribute.
+	 * @see #getLevel()
+	 * @generated
+	 */
+	void setLevel(String value);
 
 } // module

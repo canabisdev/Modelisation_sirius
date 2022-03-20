@@ -24,6 +24,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.forumImpl#getEtudiant <em>Etudiant</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.forumImpl#getNameFrm <em>Name Frm</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.forumImpl#getContenuFrm <em>Contenu Frm</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +40,43 @@ public class forumImpl extends MinimalEObjectImpl.Container implements forum {
 	 * @ordered
 	 */
 	protected etudiant etudiant;
+
+	/**
+	 * The default value of the '{@link #getNameFrm() <em>Name Frm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameFrm()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_FRM_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getNameFrm() <em>Name Frm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameFrm()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameFrm = NAME_FRM_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getContenuFrm() <em>Contenu Frm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContenuFrm()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CONTENU_FRM_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getContenuFrm() <em>Contenu Frm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getContenuFrm()
+	 * @generated
+	 * @ordered
+	 */
+	protected String contenuFrm = CONTENU_FRM_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,6 +170,50 @@ public class forumImpl extends MinimalEObjectImpl.Container implements forum {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getNameFrm() {
+		return nameFrm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameFrm(String newNameFrm) {
+		String oldNameFrm = nameFrm;
+		nameFrm = newNameFrm;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.FORUM__NAME_FRM, oldNameFrm,
+					nameFrm));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getContenuFrm() {
+		return contenuFrm;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setContenuFrm(String newContenuFrm) {
+		String oldContenuFrm = contenuFrm;
+		contenuFrm = newContenuFrm;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.FORUM__CONTENU_FRM, oldContenuFrm,
+					contenuFrm));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -169,6 +252,10 @@ public class forumImpl extends MinimalEObjectImpl.Container implements forum {
 			if (resolve)
 				return getEtudiant();
 			return basicGetEtudiant();
+		case GroupeidmPackage.FORUM__NAME_FRM:
+			return getNameFrm();
+		case GroupeidmPackage.FORUM__CONTENU_FRM:
+			return getContenuFrm();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -183,6 +270,12 @@ public class forumImpl extends MinimalEObjectImpl.Container implements forum {
 		switch (featureID) {
 		case GroupeidmPackage.FORUM__ETUDIANT:
 			setEtudiant((etudiant) newValue);
+			return;
+		case GroupeidmPackage.FORUM__NAME_FRM:
+			setNameFrm((String) newValue);
+			return;
+		case GroupeidmPackage.FORUM__CONTENU_FRM:
+			setContenuFrm((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -199,6 +292,12 @@ public class forumImpl extends MinimalEObjectImpl.Container implements forum {
 		case GroupeidmPackage.FORUM__ETUDIANT:
 			setEtudiant((etudiant) null);
 			return;
+		case GroupeidmPackage.FORUM__NAME_FRM:
+			setNameFrm(NAME_FRM_EDEFAULT);
+			return;
+		case GroupeidmPackage.FORUM__CONTENU_FRM:
+			setContenuFrm(CONTENU_FRM_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -213,8 +312,31 @@ public class forumImpl extends MinimalEObjectImpl.Container implements forum {
 		switch (featureID) {
 		case GroupeidmPackage.FORUM__ETUDIANT:
 			return etudiant != null;
+		case GroupeidmPackage.FORUM__NAME_FRM:
+			return NAME_FRM_EDEFAULT == null ? nameFrm != null : !NAME_FRM_EDEFAULT.equals(nameFrm);
+		case GroupeidmPackage.FORUM__CONTENU_FRM:
+			return CONTENU_FRM_EDEFAULT == null ? contenuFrm != null : !CONTENU_FRM_EDEFAULT.equals(contenuFrm);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (nameFrm: ");
+		result.append(nameFrm);
+		result.append(", contenuFrm: ");
+		result.append(contenuFrm);
+		result.append(')');
+		return result.toString();
 	}
 
 } //forumImpl

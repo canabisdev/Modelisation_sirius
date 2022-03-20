@@ -24,6 +24,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.mailImpl#getEtudiant <em>Etudiant</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.mailImpl#getAdresseMail <em>Adresse Mail</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.mailImpl#getPassword <em>Password</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +40,43 @@ public class mailImpl extends MinimalEObjectImpl.Container implements mail {
 	 * @ordered
 	 */
 	protected etudiant etudiant;
+
+	/**
+	 * The default value of the '{@link #getAdresseMail() <em>Adresse Mail</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAdresseMail()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String ADRESSE_MAIL_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getAdresseMail() <em>Adresse Mail</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getAdresseMail()
+	 * @generated
+	 * @ordered
+	 */
+	protected String adresseMail = ADRESSE_MAIL_EDEFAULT;
+	/**
+	 * The default value of the '{@link #getPassword() <em>Password</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPassword()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PASSWORD_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getPassword() <em>Password</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPassword()
+	 * @generated
+	 * @ordered
+	 */
+	protected String password = PASSWORD_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,6 +170,50 @@ public class mailImpl extends MinimalEObjectImpl.Container implements mail {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getAdresseMail() {
+		return adresseMail;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setAdresseMail(String newAdresseMail) {
+		String oldAdresseMail = adresseMail;
+		adresseMail = newAdresseMail;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.MAIL__ADRESSE_MAIL, oldAdresseMail,
+					adresseMail));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getPassword() {
+		return password;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPassword(String newPassword) {
+		String oldPassword = password;
+		password = newPassword;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.MAIL__PASSWORD, oldPassword,
+					password));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -169,6 +252,10 @@ public class mailImpl extends MinimalEObjectImpl.Container implements mail {
 			if (resolve)
 				return getEtudiant();
 			return basicGetEtudiant();
+		case GroupeidmPackage.MAIL__ADRESSE_MAIL:
+			return getAdresseMail();
+		case GroupeidmPackage.MAIL__PASSWORD:
+			return getPassword();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -183,6 +270,12 @@ public class mailImpl extends MinimalEObjectImpl.Container implements mail {
 		switch (featureID) {
 		case GroupeidmPackage.MAIL__ETUDIANT:
 			setEtudiant((etudiant) newValue);
+			return;
+		case GroupeidmPackage.MAIL__ADRESSE_MAIL:
+			setAdresseMail((String) newValue);
+			return;
+		case GroupeidmPackage.MAIL__PASSWORD:
+			setPassword((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -199,6 +292,12 @@ public class mailImpl extends MinimalEObjectImpl.Container implements mail {
 		case GroupeidmPackage.MAIL__ETUDIANT:
 			setEtudiant((etudiant) null);
 			return;
+		case GroupeidmPackage.MAIL__ADRESSE_MAIL:
+			setAdresseMail(ADRESSE_MAIL_EDEFAULT);
+			return;
+		case GroupeidmPackage.MAIL__PASSWORD:
+			setPassword(PASSWORD_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -213,8 +312,31 @@ public class mailImpl extends MinimalEObjectImpl.Container implements mail {
 		switch (featureID) {
 		case GroupeidmPackage.MAIL__ETUDIANT:
 			return etudiant != null;
+		case GroupeidmPackage.MAIL__ADRESSE_MAIL:
+			return ADRESSE_MAIL_EDEFAULT == null ? adresseMail != null : !ADRESSE_MAIL_EDEFAULT.equals(adresseMail);
+		case GroupeidmPackage.MAIL__PASSWORD:
+			return PASSWORD_EDEFAULT == null ? password != null : !PASSWORD_EDEFAULT.equals(password);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (adresseMail: ");
+		result.append(adresseMail);
+		result.append(", password: ");
+		result.append(password);
+		result.append(')');
+		return result.toString();
 	}
 
 } //mailImpl

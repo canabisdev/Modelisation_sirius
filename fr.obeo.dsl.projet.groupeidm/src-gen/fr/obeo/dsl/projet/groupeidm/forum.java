@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.forum#getEtudiant <em>Etudiant</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.forum#getNameFrm <em>Name Frm</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.forum#getContenuFrm <em>Contenu Frm</em>}</li>
  * </ul>
  *
  * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getforum()
@@ -44,5 +46,49 @@ public interface forum extends EObject {
 	 * @generated
 	 */
 	void setEtudiant(etudiant value);
+
+	/**
+	 * Returns the value of the '<em><b>Name Frm</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name Frm</em>' attribute.
+	 * @see #setNameFrm(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getforum_NameFrm()
+	 * @model
+	 * @generated
+	 */
+	String getNameFrm();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.forum#getNameFrm <em>Name Frm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Frm</em>' attribute.
+	 * @see #getNameFrm()
+	 * @generated
+	 */
+	void setNameFrm(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Contenu Frm</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Contenu Frm</em>' attribute.
+	 * @see #setContenuFrm(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getforum_ContenuFrm()
+	 * @model
+	 * @generated
+	 */
+	String getContenuFrm();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.forum#getContenuFrm <em>Contenu Frm</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Contenu Frm</em>' attribute.
+	 * @see #getContenuFrm()
+	 * @generated
+	 */
+	void setContenuFrm(String value);
 
 } // forum

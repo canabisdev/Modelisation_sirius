@@ -41,6 +41,12 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl#getMail <em>Mail</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl#getRepository <em>Repository</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl#getGroupe <em>Groupe</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl#getFirstNameEt <em>First Name Et</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl#getLastNameEt <em>Last Name Et</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl#getNumEt <em>Num Et</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl#getClasse <em>Classe</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl#getLevel <em>Level</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.etudiantImpl#getNote <em>Note</em>}</li>
  * </ul>
  *
  * @generated
@@ -105,6 +111,126 @@ public class etudiantImpl extends MinimalEObjectImpl.Container implements etudia
 	 * @ordered
 	 */
 	protected groupe groupe;
+
+	/**
+	 * The default value of the '{@link #getFirstNameEt() <em>First Name Et</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFirstNameEt()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String FIRST_NAME_ET_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getFirstNameEt() <em>First Name Et</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFirstNameEt()
+	 * @generated
+	 * @ordered
+	 */
+	protected String firstNameEt = FIRST_NAME_ET_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLastNameEt() <em>Last Name Et</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastNameEt()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String LAST_NAME_ET_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getLastNameEt() <em>Last Name Et</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLastNameEt()
+	 * @generated
+	 * @ordered
+	 */
+	protected String lastNameEt = LAST_NAME_ET_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNumEt() <em>Num Et</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumEt()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int NUM_ET_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getNumEt() <em>Num Et</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNumEt()
+	 * @generated
+	 * @ordered
+	 */
+	protected int numEt = NUM_ET_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getClasse() <em>Classe</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClasse()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String CLASSE_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getClasse() <em>Classe</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getClasse()
+	 * @generated
+	 * @ordered
+	 */
+	protected String classe = CLASSE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getLevel() <em>Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLevel()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final int LEVEL_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getLevel() <em>Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getLevel()
+	 * @generated
+	 * @ordered
+	 */
+	protected int level = LEVEL_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getNote() <em>Note</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNote()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final double NOTE_EDEFAULT = 0.0;
+
+	/**
+	 * The cached value of the '{@link #getNote() <em>Note</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNote()
+	 * @generated
+	 * @ordered
+	 */
+	protected double note = NOTE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -476,6 +602,135 @@ public class etudiantImpl extends MinimalEObjectImpl.Container implements etudia
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getFirstNameEt() {
+		return firstNameEt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFirstNameEt(String newFirstNameEt) {
+		String oldFirstNameEt = firstNameEt;
+		firstNameEt = newFirstNameEt;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.ETUDIANT__FIRST_NAME_ET,
+					oldFirstNameEt, firstNameEt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getLastNameEt() {
+		return lastNameEt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLastNameEt(String newLastNameEt) {
+		String oldLastNameEt = lastNameEt;
+		lastNameEt = newLastNameEt;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.ETUDIANT__LAST_NAME_ET,
+					oldLastNameEt, lastNameEt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getNumEt() {
+		return numEt;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNumEt(int newNumEt) {
+		int oldNumEt = numEt;
+		numEt = newNumEt;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.ETUDIANT__NUM_ET, oldNumEt, numEt));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getClasse() {
+		return classe;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setClasse(String newClasse) {
+		String oldClasse = classe;
+		classe = newClasse;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.ETUDIANT__CLASSE, oldClasse,
+					classe));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int getLevel() {
+		return level;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setLevel(int newLevel) {
+		int oldLevel = level;
+		level = newLevel;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.ETUDIANT__LEVEL, oldLevel, level));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public double getNote() {
+		return note;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNote(double newNote) {
+		double oldNote = note;
+		note = newNote;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.ETUDIANT__NOTE, oldNote, note));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -560,6 +815,18 @@ public class etudiantImpl extends MinimalEObjectImpl.Container implements etudia
 			if (resolve)
 				return getGroupe();
 			return basicGetGroupe();
+		case GroupeidmPackage.ETUDIANT__FIRST_NAME_ET:
+			return getFirstNameEt();
+		case GroupeidmPackage.ETUDIANT__LAST_NAME_ET:
+			return getLastNameEt();
+		case GroupeidmPackage.ETUDIANT__NUM_ET:
+			return getNumEt();
+		case GroupeidmPackage.ETUDIANT__CLASSE:
+			return getClasse();
+		case GroupeidmPackage.ETUDIANT__LEVEL:
+			return getLevel();
+		case GroupeidmPackage.ETUDIANT__NOTE:
+			return getNote();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -592,6 +859,24 @@ public class etudiantImpl extends MinimalEObjectImpl.Container implements etudia
 		case GroupeidmPackage.ETUDIANT__GROUPE:
 			setGroupe((groupe) newValue);
 			return;
+		case GroupeidmPackage.ETUDIANT__FIRST_NAME_ET:
+			setFirstNameEt((String) newValue);
+			return;
+		case GroupeidmPackage.ETUDIANT__LAST_NAME_ET:
+			setLastNameEt((String) newValue);
+			return;
+		case GroupeidmPackage.ETUDIANT__NUM_ET:
+			setNumEt((Integer) newValue);
+			return;
+		case GroupeidmPackage.ETUDIANT__CLASSE:
+			setClasse((String) newValue);
+			return;
+		case GroupeidmPackage.ETUDIANT__LEVEL:
+			setLevel((Integer) newValue);
+			return;
+		case GroupeidmPackage.ETUDIANT__NOTE:
+			setNote((Double) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -622,6 +907,24 @@ public class etudiantImpl extends MinimalEObjectImpl.Container implements etudia
 		case GroupeidmPackage.ETUDIANT__GROUPE:
 			setGroupe((groupe) null);
 			return;
+		case GroupeidmPackage.ETUDIANT__FIRST_NAME_ET:
+			setFirstNameEt(FIRST_NAME_ET_EDEFAULT);
+			return;
+		case GroupeidmPackage.ETUDIANT__LAST_NAME_ET:
+			setLastNameEt(LAST_NAME_ET_EDEFAULT);
+			return;
+		case GroupeidmPackage.ETUDIANT__NUM_ET:
+			setNumEt(NUM_ET_EDEFAULT);
+			return;
+		case GroupeidmPackage.ETUDIANT__CLASSE:
+			setClasse(CLASSE_EDEFAULT);
+			return;
+		case GroupeidmPackage.ETUDIANT__LEVEL:
+			setLevel(LEVEL_EDEFAULT);
+			return;
+		case GroupeidmPackage.ETUDIANT__NOTE:
+			setNote(NOTE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -646,8 +949,47 @@ public class etudiantImpl extends MinimalEObjectImpl.Container implements etudia
 			return repository != null;
 		case GroupeidmPackage.ETUDIANT__GROUPE:
 			return groupe != null;
+		case GroupeidmPackage.ETUDIANT__FIRST_NAME_ET:
+			return FIRST_NAME_ET_EDEFAULT == null ? firstNameEt != null : !FIRST_NAME_ET_EDEFAULT.equals(firstNameEt);
+		case GroupeidmPackage.ETUDIANT__LAST_NAME_ET:
+			return LAST_NAME_ET_EDEFAULT == null ? lastNameEt != null : !LAST_NAME_ET_EDEFAULT.equals(lastNameEt);
+		case GroupeidmPackage.ETUDIANT__NUM_ET:
+			return numEt != NUM_ET_EDEFAULT;
+		case GroupeidmPackage.ETUDIANT__CLASSE:
+			return CLASSE_EDEFAULT == null ? classe != null : !CLASSE_EDEFAULT.equals(classe);
+		case GroupeidmPackage.ETUDIANT__LEVEL:
+			return level != LEVEL_EDEFAULT;
+		case GroupeidmPackage.ETUDIANT__NOTE:
+			return note != NOTE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (firstNameEt: ");
+		result.append(firstNameEt);
+		result.append(", lastNameEt: ");
+		result.append(lastNameEt);
+		result.append(", numEt: ");
+		result.append(numEt);
+		result.append(", classe: ");
+		result.append(classe);
+		result.append(", level: ");
+		result.append(level);
+		result.append(", Note: ");
+		result.append(note);
+		result.append(')');
+		return result.toString();
 	}
 
 } //etudiantImpl

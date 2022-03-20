@@ -10,8 +10,8 @@ import fr.obeo.dsl.projet.groupeidm.chapitre;
 import fr.obeo.dsl.projet.groupeidm.chat;
 import fr.obeo.dsl.projet.groupeidm.connecte;
 import fr.obeo.dsl.projet.groupeidm.etudiant;
+import fr.obeo.dsl.projet.groupeidm.formation;
 import fr.obeo.dsl.projet.groupeidm.forum;
-import fr.obeo.dsl.projet.groupeidm.fromation;
 import fr.obeo.dsl.projet.groupeidm.groupe;
 import fr.obeo.dsl.projet.groupeidm.mail;
 import fr.obeo.dsl.projet.groupeidm.membre;
@@ -22,6 +22,7 @@ import fr.obeo.dsl.projet.groupeidm.repository;
 import fr.obeo.dsl.projet.groupeidm.tracking;
 import fr.obeo.dsl.projet.groupeidm.tuteur;
 
+import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -68,7 +69,7 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass fromationEClass = null;
+	private EClass formationEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -295,6 +296,15 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getgroupe_NameGp() {
+		return (EAttribute) groupeEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getadmin() {
 		return adminEClass;
 	}
@@ -313,8 +323,26 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getadmin_Fromation() {
+	public EReference getadmin_Formation() {
 		return (EReference) adminEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getadmin_NameAdm() {
+		return (EAttribute) adminEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getadmin_PasswordAdm() {
+		return (EAttribute) adminEClass.getEStructuralFeatures().get(3);
 	}
 
 	/**
@@ -340,6 +368,15 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getauteur_NameAtr() {
+		return (EAttribute) auteurEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getmembre() {
 		return membreEClass;
 	}
@@ -349,8 +386,8 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EClass getfromation() {
-		return fromationEClass;
+	public EAttribute getmembre_Counts() {
+		return (EAttribute) membreEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -358,8 +395,8 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getfromation_Admin() {
-		return (EReference) fromationEClass.getEStructuralFeatures().get(0);
+	public EClass getformation() {
+		return formationEClass;
 	}
 
 	/**
@@ -367,8 +404,44 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EReference getfromation_Module() {
-		return (EReference) fromationEClass.getEStructuralFeatures().get(1);
+	public EReference getformation_Admin() {
+		return (EReference) formationEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getformation_Module() {
+		return (EReference) formationEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getformation_NameFrm() {
+		return (EAttribute) formationEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getformation_Type() {
+		return (EAttribute) formationEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getformation_Duration() {
+		return (EAttribute) formationEClass.getEStructuralFeatures().get(4);
 	}
 
 	/**
@@ -403,6 +476,42 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute gettuteur_FirstNameTr() {
+		return (EAttribute) tuteurEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute gettuteur_LastNameTr() {
+		return (EAttribute) tuteurEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute gettuteur_NumTr() {
+		return (EAttribute) tuteurEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute gettuteur_Matiere() {
+		return (EAttribute) tuteurEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getforum() {
 		return forumEClass;
 	}
@@ -414,6 +523,24 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 */
 	public EReference getforum_Etudiant() {
 		return (EReference) forumEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getforum_NameFrm() {
+		return (EAttribute) forumEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getforum_ContenuFrm() {
+		return (EAttribute) forumEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -439,6 +566,24 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getchat_PseudoChat() {
+		return (EAttribute) chatEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getchat_Status() {
+		return (EAttribute) chatEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getmail() {
 		return mailEClass;
 	}
@@ -457,6 +602,24 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getmail_AdresseMail() {
+		return (EAttribute) mailEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getmail_Password() {
+		return (EAttribute) mailEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getrepository() {
 		return repositoryEClass;
 	}
@@ -468,6 +631,15 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 */
 	public EReference getrepository_Etudiant() {
 		return (EReference) repositoryEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getrepository_NameRp() {
+		return (EAttribute) repositoryEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -495,6 +667,15 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 */
 	public EReference getchapitre_Tracking() {
 		return (EReference) chapitreEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getchapitre_NameChp() {
+		return (EAttribute) chapitreEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -547,8 +728,35 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getmodule_Coeff() {
+		return (EAttribute) moduleEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getmodule_Level() {
+		return (EAttribute) moduleEClass.getEStructuralFeatures().get(5);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getpage() {
 		return pageEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getpage_NumberPg() {
+		return (EAttribute) pageEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -664,6 +872,60 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getetudiant_FirstNameEt() {
+		return (EAttribute) etudiantEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getetudiant_LastNameEt() {
+		return (EAttribute) etudiantEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getetudiant_NumEt() {
+		return (EAttribute) etudiantEClass.getEStructuralFeatures().get(8);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getetudiant_Classe() {
+		return (EAttribute) etudiantEClass.getEStructuralFeatures().get(9);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getetudiant_Level() {
+		return (EAttribute) etudiantEClass.getEStructuralFeatures().get(10);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getetudiant_Note() {
+		return (EAttribute) etudiantEClass.getEStructuralFeatures().get(11);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getconnecte() {
 		return connecteEClass;
 	}
@@ -682,8 +944,44 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getconnecte_IsConnect() {
+		return (EAttribute) connecteEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getprofil() {
 		return profilEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getprofil_Avatar() {
+		return (EAttribute) profilEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getprofil_City() {
+		return (EAttribute) profilEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getprofil_Tel() {
+		return (EAttribute) profilEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -723,47 +1021,70 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 		createEReference(groupeEClass, GROUPE__FORUM);
 		createEReference(groupeEClass, GROUPE__TUTEUR);
 		createEReference(groupeEClass, GROUPE__ETUDIANT);
+		createEAttribute(groupeEClass, GROUPE__NAME_GP);
 
 		adminEClass = createEClass(ADMIN);
 		createEReference(adminEClass, ADMIN__GROUPE);
-		createEReference(adminEClass, ADMIN__FROMATION);
+		createEReference(adminEClass, ADMIN__FORMATION);
+		createEAttribute(adminEClass, ADMIN__NAME_ADM);
+		createEAttribute(adminEClass, ADMIN__PASSWORD_ADM);
 
 		auteurEClass = createEClass(AUTEUR);
 		createEReference(auteurEClass, AUTEUR__MODULE);
+		createEAttribute(auteurEClass, AUTEUR__NAME_ATR);
 
 		membreEClass = createEClass(MEMBRE);
+		createEAttribute(membreEClass, MEMBRE__COUNTS);
 
-		fromationEClass = createEClass(FROMATION);
-		createEReference(fromationEClass, FROMATION__ADMIN);
-		createEReference(fromationEClass, FROMATION__MODULE);
+		formationEClass = createEClass(FORMATION);
+		createEReference(formationEClass, FORMATION__ADMIN);
+		createEReference(formationEClass, FORMATION__MODULE);
+		createEAttribute(formationEClass, FORMATION__NAME_FRM);
+		createEAttribute(formationEClass, FORMATION__TYPE);
+		createEAttribute(formationEClass, FORMATION__DURATION);
 
 		tuteurEClass = createEClass(TUTEUR);
 		createEReference(tuteurEClass, TUTEUR__TRACKING);
 		createEReference(tuteurEClass, TUTEUR__GROUPE);
+		createEAttribute(tuteurEClass, TUTEUR__FIRST_NAME_TR);
+		createEAttribute(tuteurEClass, TUTEUR__LAST_NAME_TR);
+		createEAttribute(tuteurEClass, TUTEUR__NUM_TR);
+		createEAttribute(tuteurEClass, TUTEUR__MATIERE);
 
 		forumEClass = createEClass(FORUM);
 		createEReference(forumEClass, FORUM__ETUDIANT);
+		createEAttribute(forumEClass, FORUM__NAME_FRM);
+		createEAttribute(forumEClass, FORUM__CONTENU_FRM);
 
 		chatEClass = createEClass(CHAT);
 		createEReference(chatEClass, CHAT__ETUDIANT);
+		createEAttribute(chatEClass, CHAT__PSEUDO_CHAT);
+		createEAttribute(chatEClass, CHAT__STATUS);
 
 		mailEClass = createEClass(MAIL);
 		createEReference(mailEClass, MAIL__ETUDIANT);
+		createEAttribute(mailEClass, MAIL__ADRESSE_MAIL);
+		createEAttribute(mailEClass, MAIL__PASSWORD);
 
 		repositoryEClass = createEClass(REPOSITORY);
 		createEReference(repositoryEClass, REPOSITORY__ETUDIANT);
+		createEAttribute(repositoryEClass, REPOSITORY__NAME_RP);
 
 		chapitreEClass = createEClass(CHAPITRE);
 		createEReference(chapitreEClass, CHAPITRE__PAGE);
 		createEReference(chapitreEClass, CHAPITRE__TRACKING);
+		createEAttribute(chapitreEClass, CHAPITRE__NAME_CHP);
 
 		moduleEClass = createEClass(MODULE);
 		createEReference(moduleEClass, MODULE__FROMATION);
 		createEReference(moduleEClass, MODULE__AUTEUR);
 		createEReference(moduleEClass, MODULE__CHAPITRE);
 		createEReference(moduleEClass, MODULE__TRACKING);
+		createEAttribute(moduleEClass, MODULE__COEFF);
+		createEAttribute(moduleEClass, MODULE__LEVEL);
 
 		pageEClass = createEClass(PAGE);
+		createEAttribute(pageEClass, PAGE__NUMBER_PG);
 
 		trackingEClass = createEClass(TRACKING);
 		createEReference(trackingEClass, TRACKING__MODULE);
@@ -778,11 +1099,21 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 		createEReference(etudiantEClass, ETUDIANT__MAIL);
 		createEReference(etudiantEClass, ETUDIANT__REPOSITORY);
 		createEReference(etudiantEClass, ETUDIANT__GROUPE);
+		createEAttribute(etudiantEClass, ETUDIANT__FIRST_NAME_ET);
+		createEAttribute(etudiantEClass, ETUDIANT__LAST_NAME_ET);
+		createEAttribute(etudiantEClass, ETUDIANT__NUM_ET);
+		createEAttribute(etudiantEClass, ETUDIANT__CLASSE);
+		createEAttribute(etudiantEClass, ETUDIANT__LEVEL);
+		createEAttribute(etudiantEClass, ETUDIANT__NOTE);
 
 		connecteEClass = createEClass(CONNECTE);
 		createEReference(connecteEClass, CONNECTE__TRACKING);
+		createEAttribute(connecteEClass, CONNECTE__IS_CONNECT);
 
 		profilEClass = createEClass(PROFIL);
+		createEAttribute(profilEClass, PROFIL__AVATAR);
+		createEAttribute(profilEClass, PROFIL__CITY);
+		createEAttribute(profilEClass, PROFIL__TEL);
 	}
 
 	/**
@@ -820,7 +1151,7 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 		connecteEClass.getESuperTypes().add(this.getetudiant());
 
 		// Initialize classes, features, and operations; add parameters
-		initEClass(groupeEClass, groupe.class, "groupe", IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEClass(groupeEClass, groupe.class, "groupe", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getgroupe_Admin(), this.getadmin(), this.getadmin_Groupe(), "admin", null, 0, 1, groupe.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -842,30 +1173,46 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 		initEReference(getgroupe_Etudiant(), this.getetudiant(), this.getetudiant_Groupe(), "etudiant", null, 0, 1,
 				groupe.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getgroupe_NameGp(), ecorePackage.getEString(), "nameGp", null, 0, 1, groupe.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(adminEClass, admin.class, "admin", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getadmin_Groupe(), this.getgroupe(), this.getgroupe_Admin(), "groupe", null, 0, 1, admin.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getadmin_Fromation(), this.getfromation(), this.getfromation_Admin(), "fromation", null, 0, 1,
+		initEReference(getadmin_Formation(), this.getformation(), this.getformation_Admin(), "formation", null, 0, 1,
 				admin.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getadmin_NameAdm(), ecorePackage.getEString(), "nameAdm", null, 0, 1, admin.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getadmin_PasswordAdm(), ecorePackage.getEString(), "passwordAdm", null, 0, 1, admin.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(auteurEClass, auteur.class, "auteur", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getauteur_Module(), this.getmodule(), this.getmodule_Auteur(), "module", null, 0, 1,
 				auteur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getauteur_NameAtr(), ecorePackage.getEString(), "nameAtr", null, 0, 1, auteur.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(membreEClass, membre.class, "membre", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getmembre_Counts(), ecorePackage.getEInt(), "counts", null, 0, 1, membre.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(fromationEClass, fromation.class, "fromation", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(formationEClass, formation.class, "formation", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getfromation_Admin(), this.getadmin(), this.getadmin_Fromation(), "admin", null, 0, 1,
-				fromation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getformation_Admin(), this.getadmin(), this.getadmin_Formation(), "admin", null, 0, 1,
+				formation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getfromation_Module(), this.getmodule(), this.getmodule_Fromation(), "module", null, 0, 1,
-				fromation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+		initEReference(getformation_Module(), this.getmodule(), this.getmodule_Fromation(), "module", null, 0, 1,
+				formation.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getformation_NameFrm(), ecorePackage.getEString(), "nameFrm", null, 0, 1, formation.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getformation_Type(), ecorePackage.getEString(), "type", null, 0, 1, formation.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getformation_Duration(), ecorePackage.getEDate(), "duration", null, 0, 1, formation.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tuteurEClass, tuteur.class, "tuteur", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(gettuteur_Tracking(), this.gettracking(), this.gettracking_Tuteur(), "tracking", null, 0, 1,
@@ -874,27 +1221,49 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 		initEReference(gettuteur_Groupe(), this.getgroupe(), this.getgroupe_Tuteur(), "groupe", null, 0, 1,
 				tuteur.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(gettuteur_FirstNameTr(), ecorePackage.getEString(), "firstNameTr", null, 0, 1, tuteur.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(gettuteur_LastNameTr(), ecorePackage.getEString(), "lastNameTr", null, 0, 1, tuteur.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(gettuteur_NumTr(), ecorePackage.getEString(), "numTr", null, 0, 1, tuteur.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(gettuteur_Matiere(), ecorePackage.getEString(), "matiere", null, 0, 1, tuteur.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(forumEClass, forum.class, "forum", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getforum_Etudiant(), this.getetudiant(), this.getetudiant_Forum(), "etudiant", null, 0, 1,
 				forum.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getforum_NameFrm(), ecorePackage.getEString(), "nameFrm", null, 0, 1, forum.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getforum_ContenuFrm(), ecorePackage.getEString(), "contenuFrm", null, 0, 1, forum.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(chatEClass, chat.class, "chat", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getchat_Etudiant(), this.getetudiant(), this.getetudiant_Chat(), "etudiant", null, 0, 1,
 				chat.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getchat_PseudoChat(), ecorePackage.getEString(), "pseudoChat", null, 0, 1, chat.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getchat_Status(), ecorePackage.getEBoolean(), "status", "false", 0, 1, chat.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(mailEClass, mail.class, "mail", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getmail_Etudiant(), this.getetudiant(), this.getetudiant_Mail(), "etudiant", null, 0, 1,
 				mail.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getmail_AdresseMail(), ecorePackage.getEString(), "adresseMail", null, 0, 1, mail.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getmail_Password(), ecorePackage.getEString(), "password", null, 0, 1, mail.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(repositoryEClass, repository.class, "repository", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getrepository_Etudiant(), this.getetudiant(), this.getetudiant_Repository(), "etudiant", null, 0,
 				1, repository.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getrepository_NameRp(), ecorePackage.getEString(), "nameRp", null, 0, 1, repository.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(chapitreEClass, chapitre.class, "chapitre", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -904,9 +1273,11 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 		initEReference(getchapitre_Tracking(), this.gettracking(), this.gettracking_Chapitre(), "tracking", null, 0, 1,
 				chapitre.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getchapitre_NameChp(), ecorePackage.getEString(), "nameChp", null, 0, 1, chapitre.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(moduleEClass, module.class, "module", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getmodule_Fromation(), this.getfromation(), this.getfromation_Module(), "fromation", null, 0, 1,
+		initEReference(getmodule_Fromation(), this.getformation(), this.getformation_Module(), "fromation", null, 0, 1,
 				module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getmodule_Auteur(), this.getauteur(), this.getauteur_Module(), "auteur", null, 0, 1,
@@ -918,8 +1289,14 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 		initEReference(getmodule_Tracking(), this.gettracking(), this.gettracking_Module(), "tracking", null, 0, 1,
 				module.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getmodule_Coeff(), ecorePackage.getEInt(), "coeff", null, 0, 1, module.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getmodule_Level(), ecorePackage.getEString(), "Level", null, 0, 1, module.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pageEClass, page.class, "page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getpage_NumberPg(), ecorePackage.getEInt(), "numberPg", null, 0, 1, page.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(trackingEClass, tracking.class, "tracking", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -956,14 +1333,34 @@ public class GroupeidmPackageImpl extends EPackageImpl implements GroupeidmPacka
 		initEReference(getetudiant_Groupe(), this.getgroupe(), this.getgroupe_Etudiant(), "groupe", null, 0, 1,
 				etudiant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getetudiant_FirstNameEt(), ecorePackage.getEString(), "firstNameEt", null, 0, 1, etudiant.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getetudiant_LastNameEt(), ecorePackage.getEString(), "lastNameEt", null, 0, 1, etudiant.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getetudiant_NumEt(), ecorePackage.getEInt(), "numEt", null, 0, 1, etudiant.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getetudiant_Classe(), ecorePackage.getEString(), "classe", null, 0, 1, etudiant.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getetudiant_Level(), ecorePackage.getEInt(), "level", null, 0, 1, etudiant.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getetudiant_Note(), ecorePackage.getEDouble(), "Note", null, 0, 1, etudiant.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(connecteEClass, connecte.class, "connecte", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getconnecte_Tracking(), this.gettracking(), this.gettracking_Connecte(), "tracking", null, 0, 1,
 				connecte.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getconnecte_IsConnect(), ecorePackage.getEBoolean(), "isConnect", "false", 0, 1, connecte.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(profilEClass, profil.class, "profil", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getprofil_Avatar(), ecorePackage.getEString(), "avatar", null, 0, 1, profil.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getprofil_City(), ecorePackage.getEString(), "city", null, 0, 1, profil.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getprofil_Tel(), ecorePackage.getEInt(), "tel", null, 0, 1, profil.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

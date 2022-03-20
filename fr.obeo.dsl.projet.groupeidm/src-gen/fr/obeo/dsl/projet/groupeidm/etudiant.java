@@ -21,6 +21,12 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.etudiant#getMail <em>Mail</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.etudiant#getRepository <em>Repository</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.etudiant#getGroupe <em>Groupe</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.etudiant#getFirstNameEt <em>First Name Et</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.etudiant#getLastNameEt <em>Last Name Et</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.etudiant#getNumEt <em>Num Et</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.etudiant#getClasse <em>Classe</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.etudiant#getLevel <em>Level</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.etudiant#getNote <em>Note</em>}</li>
  * </ul>
  *
  * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getetudiant()
@@ -159,5 +165,137 @@ public interface etudiant extends EObject {
 	 * @generated
 	 */
 	void setGroupe(groupe value);
+
+	/**
+	 * Returns the value of the '<em><b>First Name Et</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>First Name Et</em>' attribute.
+	 * @see #setFirstNameEt(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getetudiant_FirstNameEt()
+	 * @model
+	 * @generated
+	 */
+	String getFirstNameEt();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getFirstNameEt <em>First Name Et</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>First Name Et</em>' attribute.
+	 * @see #getFirstNameEt()
+	 * @generated
+	 */
+	void setFirstNameEt(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Last Name Et</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Last Name Et</em>' attribute.
+	 * @see #setLastNameEt(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getetudiant_LastNameEt()
+	 * @model
+	 * @generated
+	 */
+	String getLastNameEt();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getLastNameEt <em>Last Name Et</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Last Name Et</em>' attribute.
+	 * @see #getLastNameEt()
+	 * @generated
+	 */
+	void setLastNameEt(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Num Et</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Num Et</em>' attribute.
+	 * @see #setNumEt(int)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getetudiant_NumEt()
+	 * @model
+	 * @generated
+	 */
+	int getNumEt();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getNumEt <em>Num Et</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Num Et</em>' attribute.
+	 * @see #getNumEt()
+	 * @generated
+	 */
+	void setNumEt(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Classe</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Classe</em>' attribute.
+	 * @see #setClasse(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getetudiant_Classe()
+	 * @model
+	 * @generated
+	 */
+	String getClasse();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getClasse <em>Classe</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Classe</em>' attribute.
+	 * @see #getClasse()
+	 * @generated
+	 */
+	void setClasse(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Level</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Level</em>' attribute.
+	 * @see #setLevel(int)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getetudiant_Level()
+	 * @model
+	 * @generated
+	 */
+	int getLevel();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getLevel <em>Level</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Level</em>' attribute.
+	 * @see #getLevel()
+	 * @generated
+	 */
+	void setLevel(int value);
+
+	/**
+	 * Returns the value of the '<em><b>Note</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Note</em>' attribute.
+	 * @see #setNote(double)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getetudiant_Note()
+	 * @model
+	 * @generated
+	 */
+	double getNote();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.etudiant#getNote <em>Note</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Note</em>' attribute.
+	 * @see #getNote()
+	 * @generated
+	 */
+	void setNote(double value);
 
 } // etudiant

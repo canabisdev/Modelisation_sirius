@@ -24,6 +24,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.chatImpl#getEtudiant <em>Etudiant</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.chatImpl#getPseudoChat <em>Pseudo Chat</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.chatImpl#isStatus <em>Status</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +40,43 @@ public class chatImpl extends MinimalEObjectImpl.Container implements chat {
 	 * @ordered
 	 */
 	protected etudiant etudiant;
+
+	/**
+	 * The default value of the '{@link #getPseudoChat() <em>Pseudo Chat</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPseudoChat()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String PSEUDO_CHAT_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getPseudoChat() <em>Pseudo Chat</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getPseudoChat()
+	 * @generated
+	 * @ordered
+	 */
+	protected String pseudoChat = PSEUDO_CHAT_EDEFAULT;
+	/**
+	 * The default value of the '{@link #isStatus() <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean STATUS_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isStatus() <em>Status</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isStatus()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean status = STATUS_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,6 +170,49 @@ public class chatImpl extends MinimalEObjectImpl.Container implements chat {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getPseudoChat() {
+		return pseudoChat;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setPseudoChat(String newPseudoChat) {
+		String oldPseudoChat = pseudoChat;
+		pseudoChat = newPseudoChat;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.CHAT__PSEUDO_CHAT, oldPseudoChat,
+					pseudoChat));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public boolean isStatus() {
+		return status;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setStatus(boolean newStatus) {
+		boolean oldStatus = status;
+		status = newStatus;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.CHAT__STATUS, oldStatus, status));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -169,6 +251,10 @@ public class chatImpl extends MinimalEObjectImpl.Container implements chat {
 			if (resolve)
 				return getEtudiant();
 			return basicGetEtudiant();
+		case GroupeidmPackage.CHAT__PSEUDO_CHAT:
+			return getPseudoChat();
+		case GroupeidmPackage.CHAT__STATUS:
+			return isStatus();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -183,6 +269,12 @@ public class chatImpl extends MinimalEObjectImpl.Container implements chat {
 		switch (featureID) {
 		case GroupeidmPackage.CHAT__ETUDIANT:
 			setEtudiant((etudiant) newValue);
+			return;
+		case GroupeidmPackage.CHAT__PSEUDO_CHAT:
+			setPseudoChat((String) newValue);
+			return;
+		case GroupeidmPackage.CHAT__STATUS:
+			setStatus((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -199,6 +291,12 @@ public class chatImpl extends MinimalEObjectImpl.Container implements chat {
 		case GroupeidmPackage.CHAT__ETUDIANT:
 			setEtudiant((etudiant) null);
 			return;
+		case GroupeidmPackage.CHAT__PSEUDO_CHAT:
+			setPseudoChat(PSEUDO_CHAT_EDEFAULT);
+			return;
+		case GroupeidmPackage.CHAT__STATUS:
+			setStatus(STATUS_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -213,8 +311,31 @@ public class chatImpl extends MinimalEObjectImpl.Container implements chat {
 		switch (featureID) {
 		case GroupeidmPackage.CHAT__ETUDIANT:
 			return etudiant != null;
+		case GroupeidmPackage.CHAT__PSEUDO_CHAT:
+			return PSEUDO_CHAT_EDEFAULT == null ? pseudoChat != null : !PSEUDO_CHAT_EDEFAULT.equals(pseudoChat);
+		case GroupeidmPackage.CHAT__STATUS:
+			return status != STATUS_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (pseudoChat: ");
+		result.append(pseudoChat);
+		result.append(", status: ");
+		result.append(status);
+		result.append(')');
+		return result.toString();
 	}
 
 } //chatImpl

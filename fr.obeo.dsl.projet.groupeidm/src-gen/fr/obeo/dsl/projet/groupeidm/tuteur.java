@@ -13,6 +13,10 @@ package fr.obeo.dsl.projet.groupeidm;
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.tuteur#getTracking <em>Tracking</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.tuteur#getGroupe <em>Groupe</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.tuteur#getFirstNameTr <em>First Name Tr</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.tuteur#getLastNameTr <em>Last Name Tr</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.tuteur#getNumTr <em>Num Tr</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.tuteur#getMatiere <em>Matiere</em>}</li>
  * </ul>
  *
  * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#gettuteur()
@@ -67,5 +71,93 @@ public interface tuteur extends membre {
 	 * @generated
 	 */
 	void setGroupe(groupe value);
+
+	/**
+	 * Returns the value of the '<em><b>First Name Tr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>First Name Tr</em>' attribute.
+	 * @see #setFirstNameTr(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#gettuteur_FirstNameTr()
+	 * @model
+	 * @generated
+	 */
+	String getFirstNameTr();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.tuteur#getFirstNameTr <em>First Name Tr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>First Name Tr</em>' attribute.
+	 * @see #getFirstNameTr()
+	 * @generated
+	 */
+	void setFirstNameTr(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Last Name Tr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Last Name Tr</em>' attribute.
+	 * @see #setLastNameTr(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#gettuteur_LastNameTr()
+	 * @model
+	 * @generated
+	 */
+	String getLastNameTr();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.tuteur#getLastNameTr <em>Last Name Tr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Last Name Tr</em>' attribute.
+	 * @see #getLastNameTr()
+	 * @generated
+	 */
+	void setLastNameTr(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Num Tr</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Num Tr</em>' attribute.
+	 * @see #setNumTr(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#gettuteur_NumTr()
+	 * @model
+	 * @generated
+	 */
+	String getNumTr();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.tuteur#getNumTr <em>Num Tr</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Num Tr</em>' attribute.
+	 * @see #getNumTr()
+	 * @generated
+	 */
+	void setNumTr(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Matiere</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Matiere</em>' attribute.
+	 * @see #setMatiere(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#gettuteur_Matiere()
+	 * @model
+	 * @generated
+	 */
+	String getMatiere();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.tuteur#getMatiere <em>Matiere</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Matiere</em>' attribute.
+	 * @see #getMatiere()
+	 * @generated
+	 */
+	void setMatiere(String value);
 
 } // tuteur

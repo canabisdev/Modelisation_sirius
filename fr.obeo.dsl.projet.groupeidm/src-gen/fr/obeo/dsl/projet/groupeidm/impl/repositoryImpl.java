@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.repositoryImpl#getEtudiant <em>Etudiant</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.repositoryImpl#getNameRp <em>Name Rp</em>}</li>
  * </ul>
  *
  * @generated
@@ -38,6 +39,25 @@ public class repositoryImpl extends MinimalEObjectImpl.Container implements repo
 	 * @ordered
 	 */
 	protected etudiant etudiant;
+
+	/**
+	 * The default value of the '{@link #getNameRp() <em>Name Rp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameRp()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final String NAME_RP_EDEFAULT = null;
+	/**
+	 * The cached value of the '{@link #getNameRp() <em>Name Rp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getNameRp()
+	 * @generated
+	 * @ordered
+	 */
+	protected String nameRp = NAME_RP_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -131,6 +151,28 @@ public class repositoryImpl extends MinimalEObjectImpl.Container implements repo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public String getNameRp() {
+		return nameRp;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setNameRp(String newNameRp) {
+		String oldNameRp = nameRp;
+		nameRp = newNameRp;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.REPOSITORY__NAME_RP, oldNameRp,
+					nameRp));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -169,6 +211,8 @@ public class repositoryImpl extends MinimalEObjectImpl.Container implements repo
 			if (resolve)
 				return getEtudiant();
 			return basicGetEtudiant();
+		case GroupeidmPackage.REPOSITORY__NAME_RP:
+			return getNameRp();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -183,6 +227,9 @@ public class repositoryImpl extends MinimalEObjectImpl.Container implements repo
 		switch (featureID) {
 		case GroupeidmPackage.REPOSITORY__ETUDIANT:
 			setEtudiant((etudiant) newValue);
+			return;
+		case GroupeidmPackage.REPOSITORY__NAME_RP:
+			setNameRp((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -199,6 +246,9 @@ public class repositoryImpl extends MinimalEObjectImpl.Container implements repo
 		case GroupeidmPackage.REPOSITORY__ETUDIANT:
 			setEtudiant((etudiant) null);
 			return;
+		case GroupeidmPackage.REPOSITORY__NAME_RP:
+			setNameRp(NAME_RP_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -213,8 +263,27 @@ public class repositoryImpl extends MinimalEObjectImpl.Container implements repo
 		switch (featureID) {
 		case GroupeidmPackage.REPOSITORY__ETUDIANT:
 			return etudiant != null;
+		case GroupeidmPackage.REPOSITORY__NAME_RP:
+			return NAME_RP_EDEFAULT == null ? nameRp != null : !NAME_RP_EDEFAULT.equals(nameRp);
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (nameRp: ");
+		result.append(nameRp);
+		result.append(')');
+		return result.toString();
 	}
 
 } //repositoryImpl

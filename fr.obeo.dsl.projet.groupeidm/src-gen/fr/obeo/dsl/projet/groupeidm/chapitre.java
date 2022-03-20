@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.chapitre#getPage <em>Page</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.chapitre#getTracking <em>Tracking</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.chapitre#getNameChp <em>Name Chp</em>}</li>
  * </ul>
  *
  * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getchapitre()
@@ -59,5 +60,27 @@ public interface chapitre extends EObject {
 	 * @generated
 	 */
 	void setTracking(tracking value);
+
+	/**
+	 * Returns the value of the '<em><b>Name Chp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name Chp</em>' attribute.
+	 * @see #setNameChp(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getchapitre_NameChp()
+	 * @model
+	 * @generated
+	 */
+	String getNameChp();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.chapitre#getNameChp <em>Name Chp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Chp</em>' attribute.
+	 * @see #getNameChp()
+	 * @generated
+	 */
+	void setNameChp(String value);
 
 } // chapitre

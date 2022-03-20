@@ -23,6 +23,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.connecteImpl#getTracking <em>Tracking</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.impl.connecteImpl#isIsConnect <em>Is Connect</em>}</li>
  * </ul>
  *
  * @generated
@@ -37,6 +38,25 @@ public class connecteImpl extends etudiantImpl implements connecte {
 	 * @ordered
 	 */
 	protected tracking tracking;
+
+	/**
+	 * The default value of the '{@link #isIsConnect() <em>Is Connect</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsConnect()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean IS_CONNECT_EDEFAULT = false;
+	/**
+	 * The cached value of the '{@link #isIsConnect() <em>Is Connect</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isIsConnect()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean isConnect = IS_CONNECT_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -130,6 +150,28 @@ public class connecteImpl extends etudiantImpl implements connecte {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public boolean isIsConnect() {
+		return isConnect;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setIsConnect(boolean newIsConnect) {
+		boolean oldIsConnect = isConnect;
+		isConnect = newIsConnect;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, GroupeidmPackage.CONNECTE__IS_CONNECT, oldIsConnect,
+					isConnect));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -168,6 +210,8 @@ public class connecteImpl extends etudiantImpl implements connecte {
 			if (resolve)
 				return getTracking();
 			return basicGetTracking();
+		case GroupeidmPackage.CONNECTE__IS_CONNECT:
+			return isIsConnect();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -182,6 +226,9 @@ public class connecteImpl extends etudiantImpl implements connecte {
 		switch (featureID) {
 		case GroupeidmPackage.CONNECTE__TRACKING:
 			setTracking((tracking) newValue);
+			return;
+		case GroupeidmPackage.CONNECTE__IS_CONNECT:
+			setIsConnect((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -198,6 +245,9 @@ public class connecteImpl extends etudiantImpl implements connecte {
 		case GroupeidmPackage.CONNECTE__TRACKING:
 			setTracking((tracking) null);
 			return;
+		case GroupeidmPackage.CONNECTE__IS_CONNECT:
+			setIsConnect(IS_CONNECT_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -212,8 +262,27 @@ public class connecteImpl extends etudiantImpl implements connecte {
 		switch (featureID) {
 		case GroupeidmPackage.CONNECTE__TRACKING:
 			return tracking != null;
+		case GroupeidmPackage.CONNECTE__IS_CONNECT:
+			return isConnect != IS_CONNECT_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (isConnect: ");
+		result.append(isConnect);
+		result.append(')');
+		return result.toString();
 	}
 
 } //connecteImpl

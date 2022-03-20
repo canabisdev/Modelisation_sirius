@@ -12,6 +12,7 @@ package fr.obeo.dsl.projet.groupeidm;
  * </p>
  * <ul>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.connecte#getTracking <em>Tracking</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.connecte#isIsConnect <em>Is Connect</em>}</li>
  * </ul>
  *
  * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getconnecte()
@@ -42,5 +43,28 @@ public interface connecte extends etudiant {
 	 * @generated
 	 */
 	void setTracking(tracking value);
+
+	/**
+	 * Returns the value of the '<em><b>Is Connect</b></em>' attribute.
+	 * The default value is <code>"false"</code>.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Is Connect</em>' attribute.
+	 * @see #setIsConnect(boolean)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getconnecte_IsConnect()
+	 * @model default="false"
+	 * @generated
+	 */
+	boolean isIsConnect();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.connecte#isIsConnect <em>Is Connect</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Is Connect</em>' attribute.
+	 * @see #isIsConnect()
+	 * @generated
+	 */
+	void setIsConnect(boolean value);
 
 } // connecte

@@ -7,25 +7,25 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>fromation</b></em>'.
+ * A representation of the model object '<em><b>formation</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.obeo.dsl.projet.groupeidm.fromation#getAdmin <em>Admin</em>}</li>
- *   <li>{@link fr.obeo.dsl.projet.groupeidm.fromation#getModule <em>Module</em>}</li>
- *   <li>{@link fr.obeo.dsl.projet.groupeidm.fromation#getNameFrm <em>Name Frm</em>}</li>
- *   <li>{@link fr.obeo.dsl.projet.groupeidm.fromation#getType <em>Type</em>}</li>
- *   <li>{@link fr.obeo.dsl.projet.groupeidm.fromation#getDuration <em>Duration</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.formation#getAdmin <em>Admin</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.formation#getModule <em>Module</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.formation#getNameFrm <em>Name Frm</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.formation#getType <em>Type</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.formation#getDuration <em>Duration</em>}</li>
  * </ul>
  *
- * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getfromation()
+ * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getformation()
  * @model
  * @generated
  */
-public interface fromation extends EObject {
+public interface formation extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Admin</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link fr.obeo.dsl.projet.groupeidm.admin#getFormation <em>Formation</em>}'.
@@ -33,7 +33,7 @@ public interface fromation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Admin</em>' reference.
 	 * @see #setAdmin(admin)
-	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getfromation_Admin()
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getformation_Admin()
 	 * @see fr.obeo.dsl.projet.groupeidm.admin#getFormation
 	 * @model opposite="formation"
 	 * @generated
@@ -41,7 +41,7 @@ public interface fromation extends EObject {
 	admin getAdmin();
 
 	/**
-	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.fromation#getAdmin <em>Admin</em>}' reference.
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.formation#getAdmin <em>Admin</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Admin</em>' reference.
@@ -57,7 +57,7 @@ public interface fromation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Module</em>' reference.
 	 * @see #setModule(module)
-	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getfromation_Module()
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getformation_Module()
 	 * @see fr.obeo.dsl.projet.groupeidm.module#getFromation
 	 * @model opposite="fromation"
 	 * @generated
@@ -65,7 +65,7 @@ public interface fromation extends EObject {
 	module getModule();
 
 	/**
-	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.fromation#getModule <em>Module</em>}' reference.
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.formation#getModule <em>Module</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Module</em>' reference.
@@ -80,14 +80,14 @@ public interface fromation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name Frm</em>' attribute.
 	 * @see #setNameFrm(String)
-	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getfromation_NameFrm()
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getformation_NameFrm()
 	 * @model
 	 * @generated
 	 */
 	String getNameFrm();
 
 	/**
-	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.fromation#getNameFrm <em>Name Frm</em>}' attribute.
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.formation#getNameFrm <em>Name Frm</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name Frm</em>' attribute.
@@ -102,14 +102,14 @@ public interface fromation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Type</em>' attribute.
 	 * @see #setType(String)
-	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getfromation_Type()
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getformation_Type()
 	 * @model
 	 * @generated
 	 */
 	String getType();
 
 	/**
-	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.fromation#getType <em>Type</em>}' attribute.
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.formation#getType <em>Type</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Type</em>' attribute.
@@ -124,14 +124,14 @@ public interface fromation extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Duration</em>' attribute.
 	 * @see #setDuration(Date)
-	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getfromation_Duration()
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getformation_Duration()
 	 * @model
 	 * @generated
 	 */
 	Date getDuration();
 
 	/**
-	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.fromation#getDuration <em>Duration</em>}' attribute.
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.formation#getDuration <em>Duration</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Duration</em>' attribute.
@@ -140,4 +140,4 @@ public interface fromation extends EObject {
 	 */
 	void setDuration(Date value);
 
-} // fromation
+} // formation

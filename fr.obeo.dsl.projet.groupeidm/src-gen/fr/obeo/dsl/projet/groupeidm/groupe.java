@@ -22,10 +22,11 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.groupe#getForum <em>Forum</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.groupe#getTuteur <em>Tuteur</em>}</li>
  *   <li>{@link fr.obeo.dsl.projet.groupeidm.groupe#getEtudiant <em>Etudiant</em>}</li>
+ *   <li>{@link fr.obeo.dsl.projet.groupeidm.groupe#getNameGp <em>Name Gp</em>}</li>
  * </ul>
  *
  * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getgroupe()
- * @model abstract="true"
+ * @model
  * @generated
  */
 public interface groupe extends EObject {
@@ -148,5 +149,27 @@ public interface groupe extends EObject {
 	 * @generated
 	 */
 	void setEtudiant(etudiant value);
+
+	/**
+	 * Returns the value of the '<em><b>Name Gp</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Name Gp</em>' attribute.
+	 * @see #setNameGp(String)
+	 * @see fr.obeo.dsl.projet.groupeidm.GroupeidmPackage#getgroupe_NameGp()
+	 * @model
+	 * @generated
+	 */
+	String getNameGp();
+
+	/**
+	 * Sets the value of the '{@link fr.obeo.dsl.projet.groupeidm.groupe#getNameGp <em>Name Gp</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Name Gp</em>' attribute.
+	 * @see #getNameGp()
+	 * @generated
+	 */
+	void setNameGp(String value);
 
 } // groupe
