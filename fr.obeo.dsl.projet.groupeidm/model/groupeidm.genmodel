@@ -16,6 +16,8 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference groupeidm.ecore#//groupe/mail"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference groupeidm.ecore#//groupe/chat"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference groupeidm.ecore#//groupe/forum"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//groupe/tuteur"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//groupe/etudiant"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//admin">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//admin/groupe"/>
@@ -31,6 +33,7 @@
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//tuteur">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//tuteur/tracking"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//tuteur/groupe"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//forum">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//forum/etudiant"/>
@@ -67,6 +70,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//etudiant/chat"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//etudiant/mail"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//etudiant/repository"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//etudiant/groupe"/>
     </genClasses>
     <genClasses ecoreClass="groupeidm.ecore#//connecte">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference groupeidm.ecore#//connecte/tracking"/>

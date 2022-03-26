@@ -12,6 +12,10 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="forum" upperBound="-1"
         eType="#//forum" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tuteur" eType="#//tuteur"
+        eOpposite="#//tuteur/groupe"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="etudiant" eType="#//etudiant"
+        eOpposite="#//etudiant/groupe"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="admin" eSuperTypes="#//membre">
     <eStructuralFeatures xsi:type="ecore:EReference" name="groupe" eType="#//groupe"
@@ -33,6 +37,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="tuteur" eSuperTypes="#//membre">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tracking" eType="#//tracking"
         eOpposite="#//tracking/tuteur"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupe" eType="#//groupe"
+        eOpposite="#//groupe/tuteur"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="forum">
     <eStructuralFeatures xsi:type="ecore:EReference" name="etudiant" eType="#//etudiant"
@@ -86,6 +92,8 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="mail" eType="#//mail" eOpposite="#//mail/etudiant"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="repository" eType="#//repository"
         eOpposite="#//repository/etudiant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupe" eType="#//groupe"
+        eOpposite="#//groupe/etudiant"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="connecte" eSuperTypes="#//etudiant">
     <eStructuralFeatures xsi:type="ecore:EReference" name="tracking" eType="#//tracking"
