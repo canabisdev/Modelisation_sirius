@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="groupeidm" nsURI="http://www.example.org/groupeidm" nsPrefix="groupeidm">
+  <eClassifiers xsi:type="ecore:EClass" name="groupe" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="admin" eType="#//admin"
+        eOpposite="#//admin/groupe"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repository" upperBound="-1"
+        eType="#//repository" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mail" upperBound="-1" eType="#//mail"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chat" upperBound="-1" eType="#//chat"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forum" upperBound="-1"
+        eType="#//forum" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="admin" eSuperTypes="#//membre">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="groupe" eType="#//groupe"
+        eOpposite="#//groupe/admin"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromation" eType="#//fromation"
+        eOpposite="#//fromation/admin"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="auteur" eSuperTypes="#//membre">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="module" eType="#//module"
+        eOpposite="#//module/auteur"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="membre"/>
+  <eClassifiers xsi:type="ecore:EClass" name="fromation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="admin" eType="#//admin"
+        eOpposite="#//admin/fromation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="module" eType="#//module"
+        eOpposite="#//module/fromation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="tuteur" eSuperTypes="#//membre">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tracking" eType="#//tracking"
+        eOpposite="#//tracking/tuteur"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="forum">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="etudiant" eType="#//etudiant"
+        eOpposite="#//etudiant/forum"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="chat">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="etudiant" eType="#//etudiant"
+        eOpposite="#//etudiant/chat"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="mail">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="etudiant" eType="#//etudiant"
+        eOpposite="#//etudiant/mail"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="repository">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="etudiant" eType="#//etudiant"
+        eOpposite="#//etudiant/repository"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="chapitre">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="page" upperBound="-1" eType="#//page"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tracking" eType="#//tracking"
+        eOpposite="#//tracking/chapitre"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="module">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fromation" eType="#//fromation"
+        eOpposite="#//fromation/module"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="auteur" eType="#//auteur"
+        eOpposite="#//auteur/module"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chapitre" upperBound="-1"
+        eType="#//chapitre" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tracking" eType="#//tracking"
+        eOpposite="#//tracking/module"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="page"/>
+  <eClassifiers xsi:type="ecore:EClass" name="tracking">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="module" eType="#//module"
+        eOpposite="#//module/tracking"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chapitre" eType="#//chapitre"
+        eOpposite="#//chapitre/tracking"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="connecte" eType="#//connecte"
+        eOpposite="#//connecte/tracking"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tuteur" eType="#//tuteur"
+        eOpposite="#//tuteur/tracking"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="etudiant">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="profil" upperBound="-1"
+        eType="#//profil" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="forum" eType="#//forum"
+        eOpposite="#//forum/etudiant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="chat" eType="#//chat" eOpposite="#//chat/etudiant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="mail" eType="#//mail" eOpposite="#//mail/etudiant"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="repository" eType="#//repository"
+        eOpposite="#//repository/etudiant"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="connecte" eSuperTypes="#//etudiant">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tracking" eType="#//tracking"
+        eOpposite="#//tracking/connecte"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="profil"/>
+</ecore:EPackage>
